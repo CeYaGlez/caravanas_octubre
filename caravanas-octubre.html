@@ -172,141 +172,133 @@ let _s=null;addEventListener('beforeprint',()=>{_s={...F};F={c:0,m:'',d:0,sel:''
 draw();setInterval(()=>{const d=hoy;tick();if(d!==hoy)draw()},60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden){tick();draw()}});
 </script>
 
-<!-- Botón flotante de ayuda -->
-<button id="helpbtn" aria-label="Ayuda">?</button>
-
-<!-- Ventana de ayuda -->
-<div id="helpbox" role="dialog" aria-modal="true">
-  <div class="hb-card">
-    <button id="helpclose" aria-label="Cerrar">×</button>
-    <h2>Cómo usar este calendario</h2>
-    <p class="hb-sub">Solo explora y toca. No hay nada que instalar ni registrarse.</p>
-
-    <h3>🗺️ El mapa</h3>
-    <ul>
-      <li><b>Toca cualquier municipio</b> para ver sus fechas.</li>
-      <li>Los municipios <b>de color</b> tienen caravana en octubre.</li>
-      <li>Los <b>grises</b> no tienen caravana este mes.</li>
-      <li>El borde <b>punteado</b> indica una caravana <b>en curso hoy</b>.</li>
-      <li>Una <b>estrella ★</b> avisa que la fecha cambió respecto al calendario anterior.</li>
-    </ul>
-
-    <h3>🎨 Colores de las caravanas</h3>
-    <p class="hb-legend">
-      <span><i style="background:var(--c1)"></i> Caravana 1</span>
-      <span><i style="background:var(--c2)"></i> Caravana 2</span>
-      <span><i style="background:var(--c3)"></i> Caravana 3</span>
-    </p>
-
-    <h3>🔍 Los filtros</h3>
-    <ul>
-      <li><b>Caravana:</b> muestra solo la 1, la 2 o la 3.</li>
-      <li><b>Municipio:</b> elige uno de la lista.</li>
-      <li><b>Fecha:</b> selecciona un día de octubre.</li>
-    </ul>
-
-    <h3>🔘 Los botones</h3>
-    <ul>
-      <li><b>Hoy:</b> muestra solo lo que ocurre el día de hoy.</li>
-      <li><b>Limpiar:</b> quita todos los filtros.</li>
-      <li><b>Descargar PDF:</b> guarda el calendario como PDF (elige “Guardar como PDF” en la ventana que se abre).</li>
-    </ul>
-
-    <h3>💡 En curso hoy</h3>
-    <p>La sección de arriba te dice automáticamente qué caravanas están activas hoy y cuántos días faltan para que terminen.</p>
-  </div>
-</div>
-
-<style>
-  #helpbtn{
-    position:fixed;
-    bottom:110px; right:18px;
-    z-index:50;
-    width:52px; height:52px;
-    border-radius:50%; border:0;
-    background:var(--gu); color:#fff;
-    font-size:24px; font-weight:800;
-    box-shadow:0 6px 16px rgba(0,0,0,.22);
-    cursor:pointer;
-    -webkit-tap-highlight-color:transparent;
-    margin-bottom:env(safe-area-inset-bottom,0px);
-  }
-  #helpbtn:hover{filter:brightness(1.1)}
-
-  #helpbox{
-    display:none;
-    position:fixed; inset:0;
-    z-index:60;
-    background:rgba(0,0,0,.5);
-    padding:16px;
-    overflow:auto;
-    -webkit-overflow-scrolling:touch;
-  }
-  #helpbox.open{display:block}
-
-  .hb-card{
-    position:relative;
-    max-width:600px;
-    margin:24px auto;
-    background:var(--cd); color:var(--tx);
-    border-radius:14px;
-    padding:22px 22px 26px;
-    box-shadow:0 10px 40px rgba(0,0,0,.3);
-    line-height:1.5;
-  }
-  .hb-card h2{margin:0 0 4px;color:var(--gu);font-size:20px}
-  .hb-card h3{margin:18px 0 6px;font-size:15px;color:var(--gv)}
-  .hb-sub{margin:0 0 6px;color:var(--mu);font-size:14px}
-  .hb-card ul{margin:0;padding-left:20px}
-  .hb-card li{margin:3px 0;font-size:14.5px}
-  .hb-legend{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;margin:4px 0 0}
-  .hb-legend span{display:flex;align-items:center;gap:6px}
-  .hb-legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
-  #helpclose{
-    position:absolute; top:8px; right:10px;
-    border:0; background:transparent;
-    font-size:26px; color:var(--mu);
-    cursor:pointer; line-height:1;
-    width:36px; height:36px; border-radius:8px;
-  }
-  #helpclose:hover{background:var(--bg)}
-
-  @media (max-width:600px){
-    #helpbtn{
-      bottom:150px;
-      right:14px;
-      width:48px; height:48px;
-      font-size:22px;
-    }
-    #helpbox{ padding:8px; }
-    .hb-card{
-      margin:8px auto;
-      padding:18px 16px 22px;
-      border-radius:12px;
-      max-height:calc(100vh - 16px);
-      overflow:auto;
-    }
-    .hb-card h2{font-size:18px}
-    .hb-card h3{font-size:14px;margin:14px 0 4px}
-    .hb-card li{font-size:14px}
-  }
-
-  @media print{
-    #helpbtn,#helpbox{display:none!important}
-  }
-</style>
-
 <script>
-  (function(){
-    const btn=document.getElementById('helpbtn');
-    const box=document.getElementById('helpbox');
-    const close=document.getElementById('helpclose');
-    const open=()=>{box.classList.add('open');document.body.style.overflow='hidden'};
-    const hide=()=>{box.classList.remove('open');document.body.style.overflow=''};
-    btn.addEventListener('click',open);
-    close.addEventListener('click',hide);
-    box.addEventListener('click',e=>{if(e.target===box)hide()});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')hide()});
-  })();
+(function(){
+  try{
+    const pDoc = window.parent.document;
+    if(pDoc.getElementById('helpbtn')) return; // evita duplicados
+
+    const style = pDoc.createElement('style');
+    style.textContent = `
+      #helpbtn{
+        position:fixed; bottom:110px; right:18px;
+        z-index:999999;
+        width:52px; height:52px; border-radius:50%; border:0;
+        background:#9F2241; color:#fff;
+        font-size:24px; font-weight:800;
+        box-shadow:0 6px 16px rgba(0,0,0,.22);
+        cursor:pointer; -webkit-tap-highlight-color:transparent;
+        margin-bottom:env(safe-area-inset-bottom,0px);
+        font-family:inherit;
+      }
+      #helpbtn:hover{filter:brightness(1.1)}
+      #helpbox{
+        display:none; position:fixed; inset:0;
+        z-index:1000000; background:rgba(0,0,0,.5);
+        padding:16px; overflow:auto;
+        -webkit-overflow-scrolling:touch;
+        font-family:Gotham,Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif;
+      }
+      #helpbox.open{display:block}
+      #helpbox .hb-card{
+        position:relative; max-width:600px; margin:24px auto;
+        background:#fff; color:#231a1d;
+        border-radius:14px; padding:22px 22px 26px;
+        box-shadow:0 10px 40px rgba(0,0,0,.3); line-height:1.5;
+      }
+      #helpbox .hb-card h2{margin:0 0 4px;color:#9F2241;font-size:20px}
+      #helpbox .hb-card h3{margin:18px 0 6px;font-size:15px;color:#56212f}
+      #helpbox .hb-sub{margin:0 0 6px;color:#6d6266;font-size:14px}
+      #helpbox .hb-card ul{margin:0;padding-left:20px}
+      #helpbox .hb-card li{margin:3px 0;font-size:14.5px}
+      #helpbox .hb-legend{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;margin:4px 0 0}
+      #helpbox .hb-legend span{display:flex;align-items:center;gap:6px}
+      #helpbox .hb-legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
+      #helpclose{
+        position:absolute; top:8px; right:10px; border:0; background:transparent;
+        font-size:26px; color:#6d6266; cursor:pointer; line-height:1;
+        width:36px; height:36px; border-radius:8px;
+      }
+      #helpclose:hover{background:#f6f2ec}
+      @media (prefers-color-scheme:dark){
+        #helpbox .hb-card{background:#251b1f;color:#f3ece6}
+        #helpbox .hb-card h2{color:#d6577a}
+        #helpbox .hb-card h3{color:#d4ae72}
+        #helpbox .hb-sub{color:#b3a6aa}
+        #helpclose{color:#b3a6aa}
+        #helpclose:hover{background:#1a1316}
+      }
+      @media (max-width:600px){
+        #helpbtn{bottom:150px;right:14px;width:48px;height:48px;font-size:22px}
+        #helpbox{padding:8px}
+        #helpbox .hb-card{
+          margin:8px auto; padding:18px 16px 22px; border-radius:12px;
+          max-height:calc(100vh - 16px); overflow:auto;
+        }
+        #helpbox .hb-card h2{font-size:18px}
+        #helpbox .hb-card h3{font-size:14px;margin:14px 0 4px}
+        #helpbox .hb-card li{font-size:14px}
+      }
+      @media print{ #helpbtn,#helpbox{display:none!important} }
+    `;
+    pDoc.head.appendChild(style);
+
+    const btn = pDoc.createElement('button');
+    btn.id = 'helpbtn';
+    btn.setAttribute('aria-label','Ayuda');
+    btn.textContent = '?';
+    pDoc.body.appendChild(btn);
+
+    const box = pDoc.createElement('div');
+    box.id = 'helpbox';
+    box.setAttribute('role','dialog');
+    box.setAttribute('aria-modal','true');
+    box.innerHTML = `
+      <div class="hb-card">
+        <button id="helpclose" aria-label="Cerrar">×</button>
+        <h2>Cómo usar este calendario</h2>
+        <p class="hb-sub">Solo explora y toca. No hay nada que instalar ni registrarse.</p>
+        <h3>🗺️ El mapa</h3>
+        <ul>
+          <li><b>Toca cualquier municipio</b> para ver sus fechas.</li>
+          <li>Los municipios <b>de color</b> tienen caravana en octubre.</li>
+          <li>Los <b>grises</b> no tienen caravana este mes.</li>
+          <li>El borde <b>punteado</b> indica una caravana <b>en curso hoy</b>.</li>
+          <li>Una <b>estrella ★</b> avisa que la fecha cambió respecto al calendario anterior.</li>
+        </ul>
+        <h3>🎨 Colores de las caravanas</h3>
+        <p class="hb-legend">
+          <span><i style="background:#9F2241"></i> Caravana 1</span>
+          <span><i style="background:#bc955b"></i> Caravana 2</span>
+          <span><i style="background:#4a5d6a"></i> Caravana 3</span>
+        </p>
+        <h3>🔍 Los filtros</h3>
+        <ul>
+          <li><b>Caravana:</b> muestra solo la 1, la 2 o la 3.</li>
+          <li><b>Municipio:</b> elige uno de la lista.</li>
+          <li><b>Fecha:</b> selecciona un día de octubre.</li>
+        </ul>
+        <h3>🔘 Los botones</h3>
+        <ul>
+          <li><b>Hoy:</b> muestra solo lo que ocurre el día de hoy.</li>
+          <li><b>Limpiar:</b> quita todos los filtros.</li>
+          <li><b>Descargar PDF:</b> guarda el calendario como PDF (elige “Guardar como PDF” en la ventana que se abre).</li>
+        </ul>
+        <h3>💡 En curso hoy</h3>
+        <p>La sección de arriba te dice automáticamente qué caravanas están activas hoy y cuántos días faltan para que terminen.</p>
+      </div>
+    `;
+    pDoc.body.appendChild(box);
+
+    const open = ()=>{box.classList.add('open');pDoc.body.style.overflow='hidden'};
+    const hide = ()=>{box.classList.remove('open');pDoc.body.style.overflow=''};
+    btn.addEventListener('click', open);
+    pDoc.getElementById('helpclose').addEventListener('click', hide);
+    box.addEventListener('click', e=>{if(e.target===box)hide()});
+    pDoc.addEventListener('keydown', e=>{if(e.key==='Escape')hide()});
+  } catch(e){
+    console.error('Ayuda no disponible:', e);
+  }
+})();
 </script>
 </body></html>
