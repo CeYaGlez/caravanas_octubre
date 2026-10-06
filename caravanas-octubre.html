@@ -301,4 +301,195 @@ draw();setInterval(()=>{const d=hoy;tick();if(d!==hoy)draw()},60000);document.ad
   }
 })();
 </script>
+
+<!-- Zoom y paneo del mapa -->
+<script>
+(function(){
+  const svg = document.getElementById('map');
+  if(!svg) return;
+
+  const st = document.createElement('style');
+  st.textContent = `
+    #mapzoom{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:4px;z-index:5}
+    #mapzoom button{
+      width:34px;height:34px;border-radius:8px;
+      border:1px solid var(--ln);background:var(--cd);color:var(--tx);
+      font-size:18px;font-weight:700;line-height:1;padding:0;
+      cursor:pointer;display:flex;align-items:center;justify-content:center;
+      box-shadow:0 2px 6px rgba(0,0,0,.10);
+      -webkit-tap-highlight-color:transparent;
+    }
+    #mapzoom button:hover{background:var(--bg)}
+    #mapzoom button:active{transform:scale(.95)}
+    #mapzoom svg{width:16px;height:16px}
+    @media (max-width:600px){
+      #mapzoom{top:8px;right:8px}
+      #mapzoom button{width:32px;height:32px;font-size:17px}
+    }
+    @media print{#mapzoom{display:none!important}}
+  `;
+  document.head.appendChild(st);
+
+  svg.style.touchAction = 'none';
+  svg.style.cursor = 'grab';
+  svg.style.webkitUserSelect = 'none';
+  svg.style.userSelect = 'none';
+  svg.setAttribute('draggable','false');
+
+  let baseVB = null, vb = null, tries = 0;
+  function readVB(){
+    const a = svg.getAttribute('viewBox');
+    if(!a) return null;
+    const [x,y,w,h] = a.split(/\s+/).map(Number);
+    if([x,y,w,h].some(isNaN) || w <= 0 || h <= 0) return null;
+    return {x,y,w,h};
+  }
+  const wait = setInterval(()=>{
+    const v = readVB();
+    if(v){ baseVB = {...v}; vb = {...v}; clearInterval(wait); setup(); }
+    if(++tries > 100) clearInterval(wait);
+  }, 100);
+
+  function apply(){ svg.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.w} ${vb.h}`); }
+  function clamp(){
+    const ratio = baseVB.h / baseVB.w;
+    const minW = baseVB.w / 12;
+    const maxW = baseVB.w * 1.4;
+    if(vb.w < minW){ const cx=vb.x+vb.w/2, cy=vb.y+vb.h/2; vb.w=minW; vb.h=minW*ratio; vb.x=cx-vb.w/2; vb.y=cy-vb.h/2; }
+    if(vb.w > maxW){ const cx=vb.x+vb.w/2, cy=vb.y+vb.h/2; vb.w=maxW; vb.h=maxW*ratio; vb.x=cx-vb.w/2; vb.y=cy-vb.h/2; }
+    const padX = baseVB.w * 0.5, padY = baseVB.h * 0.5;
+    vb.x = Math.max(baseVB.x - padX, Math.min(baseVB.x + baseVB.w + padX - vb.w, vb.x));
+    vb.y = Math.max(baseVB.y - padY, Math.min(baseVB.y + baseVB.h + padY - vb.h, vb.y));
+  }
+  function zoomAt(clientX, clientY, factor){
+    const r = svg.getBoundingClientRect();
+    const px = (clientX - r.left) / r.width;
+    const py = (clientY - r.top) / r.height;
+    const mx = vb.x + px * vb.w;
+    const my = vb.y + py * vb.h;
+    const nw = vb.w * factor, nh = vb.h * factor;
+    vb.x = mx - px * nw; vb.y = my - py * nh;
+    vb.w = nw; vb.h = nh;
+    clamp(); apply();
+  }
+  function blockNextClick(){
+    const b = (ev)=>{ ev.stopPropagation(); ev.stopImmediatePropagation(); ev.preventDefault(); };
+    svg.addEventListener('click', b, {capture:true});
+    setTimeout(()=>svg.removeEventListener('click', b, {capture:true}), 350);
+  }
+
+  function setup(){
+    // Rueda del ratón (PC)
+    svg.addEventListener('wheel', (e)=>{
+      e.preventDefault();
+      zoomAt(e.clientX, e.clientY, e.deltaY > 0 ? 1.15 : 0.87);
+    }, {passive:false});
+
+    // Arrastrar con el ratón
+    let mDown=false, mStart=null, mDragged=false;
+    svg.addEventListener('mousedown', (e)=>{
+      if(e.button !== 0) return;
+      e.preventDefault();
+      mDown = true; mDragged = false;
+      mStart = {x:e.clientX, y:e.clientY, vx:vb.x, vy:vb.y};
+      svg.style.cursor = 'grabbing';
+    });
+    window.addEventListener('mousemove', (e)=>{
+      if(!mDown) return;
+      const dx = e.clientX - mStart.x, dy = e.clientY - mStart.y;
+      if(Math.abs(dx) > 3 || Math.abs(dy) > 3) mDragged = true;
+      const r = svg.getBoundingClientRect();
+      vb.x = mStart.vx - (dx / r.width) * vb.w;
+      vb.y = mStart.vy - (dy / r.height) * vb.h;
+      clamp(); apply();
+    });
+    window.addEventListener('mouseup', ()=>{
+      if(!mDown) return;
+      mDown = false; svg.style.cursor = 'grab';
+      if(mDragged) blockNextClick();
+    });
+
+    // Táctil: 1 dedo = mover, 2 dedos = pellizcar
+    let tPan = null, tPinch = null;
+    svg.addEventListener('touchstart', (e)=>{
+      if(e.touches.length === 1){
+        const t = e.touches[0];
+        tPan = {x:t.clientX, y:t.clientY, vx:vb.x, vy:vb.y, moved:false};
+        tPinch = null;
+      } else if(e.touches.length === 2){
+        const [a,b] = e.touches;
+        tPinch = {
+          dist: Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY),
+          vb: {...vb},
+          cx: (a.clientX + b.clientX)/2,
+          cy: (a.clientY + b.clientY)/2
+        };
+        tPan = null;
+      }
+    }, {passive:true});
+    svg.addEventListener('touchmove', (e)=>{
+      if(tPinch && e.touches.length === 2){
+        e.preventDefault();
+        const [a,b] = e.touches;
+        const d = Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+        const f = tPinch.dist / d;
+        const r = svg.getBoundingClientRect();
+        const px = (tPinch.cx - r.left) / r.width;
+        const py = (tPinch.cy - r.top) / r.height;
+        const mx = tPinch.vb.x + px * tPinch.vb.w;
+        const my = tPinch.vb.y + py * tPinch.vb.h;
+        const nw = tPinch.vb.w * f, nh = tPinch.vb.h * f;
+        vb.x = mx - px * nw; vb.y = my - py * nh;
+        vb.w = nw; vb.h = nh;
+        clamp(); apply();
+      } else if(tPan && e.touches.length === 1){
+        e.preventDefault();
+        const t = e.touches[0];
+        const dx = t.clientX - tPan.x, dy = t.clientY - tPan.y;
+        if(Math.abs(dx) > 4 || Math.abs(dy) > 4) tPan.moved = true;
+        const r = svg.getBoundingClientRect();
+        vb.x = tPan.vx - (dx / r.width) * vb.w;
+        vb.y = tPan.vy - (dy / r.height) * vb.h;
+        clamp(); apply();
+      }
+    }, {passive:false});
+    svg.addEventListener('touchend', (e)=>{
+      if(tPan && tPan.moved) blockNextClick();
+      if(e.touches.length === 0){ tPan = null; tPinch = null; }
+    });
+
+    // Botones de zoom
+    const card = svg.closest('.c');
+    if(card){
+      if(getComputedStyle(card).position === 'static') card.style.position = 'relative';
+      const zc = document.createElement('div');
+      zc.id = 'mapzoom';
+      zc.innerHTML = `
+        <button data-z="in" aria-label="Acercar" title="Acercar">+</button>
+        <button data-z="out" aria-label="Alejar" title="Alejar">−</button>
+        <button data-z="reset" aria-label="Restablecer" title="Restablecer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 3-6.7L3 8"/>
+            <path d="M3 3v5h5"/>
+          </svg>
+        </button>
+      `;
+      card.appendChild(zc);
+      zc.addEventListener('click', (e)=>{
+        const b = e.target.closest('button');
+        if(!b) return;
+        e.preventDefault();
+        const z = b.dataset.z;
+        if(z === 'reset'){ vb = {...baseVB}; apply(); return; }
+        const r = svg.getBoundingClientRect();
+        zoomAt(r.left + r.width/2, r.top + r.height/2, z === 'in' ? 0.75 : 1.33);
+      });
+    }
+
+    // Añade la pista en la nota del mapa
+    const note = document.querySelector('.note');
+    if(note) note.textContent += ' Usa la rueda, los botones +/− o pellizca para ampliar.';
+  }
+})();
+</script>
 </body></html>
