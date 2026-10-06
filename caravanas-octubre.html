@@ -171,6 +171,7 @@ $('bp').onclick=()=>{try{window.print()}catch(e){alert('Usa Ctrl/Cmd + P y elige
 let _s=null;addEventListener('beforeprint',()=>{_s={...F};F={c:0,m:'',d:0,sel:''};draw()});addEventListener('afterprint',()=>{if(_s){F=_s;_s=null;draw()}});
 draw();setInterval(()=>{const d=hoy;tick();if(d!==hoy)draw()},60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden){tick();draw()}});
 </script>
+
 <!-- Botón flotante de ayuda -->
 <button id="helpbtn" aria-label="Ayuda">?</button>
 
@@ -218,22 +219,38 @@ draw();setInterval(()=>{const d=hoy;tick();if(d!==hoy)draw()},60000);document.ad
 
 <style>
   #helpbtn{
-    position:fixed;bottom:18px;right:18px;z-index:50;
-    width:50px;height:50px;border-radius:50%;border:0;
-    background:var(--gu);color:#fff;font-size:24px;font-weight:800;
-    box-shadow:0 6px 16px rgba(0,0,0,.22);cursor:pointer;
+    position:fixed;
+    bottom:110px; right:18px;
+    z-index:50;
+    width:52px; height:52px;
+    border-radius:50%; border:0;
+    background:var(--gu); color:#fff;
+    font-size:24px; font-weight:800;
+    box-shadow:0 6px 16px rgba(0,0,0,.22);
+    cursor:pointer;
     -webkit-tap-highlight-color:transparent;
+    margin-bottom:env(safe-area-inset-bottom,0px);
   }
   #helpbtn:hover{filter:brightness(1.1)}
+
   #helpbox{
-    display:none;position:fixed;inset:0;z-index:60;
-    background:rgba(0,0,0,.5);padding:16px;overflow:auto;
+    display:none;
+    position:fixed; inset:0;
+    z-index:60;
+    background:rgba(0,0,0,.5);
+    padding:16px;
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
   }
   #helpbox.open{display:block}
+
   .hb-card{
-    position:relative;max-width:600px;margin:24px auto;
-    background:var(--cd);color:var(--tx);
-    border-radius:14px;padding:22px 22px 26px;
+    position:relative;
+    max-width:600px;
+    margin:24px auto;
+    background:var(--cd); color:var(--tx);
+    border-radius:14px;
+    padding:22px 22px 26px;
     box-shadow:0 10px 40px rgba(0,0,0,.3);
     line-height:1.5;
   }
@@ -246,11 +263,34 @@ draw();setInterval(()=>{const d=hoy;tick();if(d!==hoy)draw()},60000);document.ad
   .hb-legend span{display:flex;align-items:center;gap:6px}
   .hb-legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
   #helpclose{
-    position:absolute;top:8px;right:10px;border:0;background:transparent;
-    font-size:26px;color:var(--mu);cursor:pointer;line-height:1;
-    width:32px;height:32px;border-radius:8px;
+    position:absolute; top:8px; right:10px;
+    border:0; background:transparent;
+    font-size:26px; color:var(--mu);
+    cursor:pointer; line-height:1;
+    width:36px; height:36px; border-radius:8px;
   }
   #helpclose:hover{background:var(--bg)}
+
+  @media (max-width:600px){
+    #helpbtn{
+      bottom:150px;
+      right:14px;
+      width:48px; height:48px;
+      font-size:22px;
+    }
+    #helpbox{ padding:8px; }
+    .hb-card{
+      margin:8px auto;
+      padding:18px 16px 22px;
+      border-radius:12px;
+      max-height:calc(100vh - 16px);
+      overflow:auto;
+    }
+    .hb-card h2{font-size:18px}
+    .hb-card h3{font-size:14px;margin:14px 0 4px}
+    .hb-card li{font-size:14px}
+  }
+
   @media print{
     #helpbtn,#helpbox{display:none!important}
   }
