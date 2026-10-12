@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Caravanas 2024-2026 · v3</title>
+<style>
+:root{--bg:#f6f7f9;--cd:#fff;--tx:#1b2430;--mu:#667085;--ln:#e4e7ec;--ac:#1d4ed8;--E:#1d4ed8;--F:#d97706;--m0:#e4e7ec;--m1:#c7d7fe;--m2:#8fb0fb;--m3:#4f7ff0;--m4:#1b3fb0;--g:#10b981;--r:#ef4444;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f141b;--cd:#18202a;--tx:#e8ecf2;--mu:#98a2b3;--ln:#2a3441;--ac:#6ea0ff;--E:#6ea0ff;--F:#f5a524;--m0:#2a3441;--m1:#27406f;--m2:#3a63b0;--m3:#5b8ae6;--m4:#9dbcff;--g:#34d399;--r:#f87171}}
+:root[data-theme="dark"]{--bg:#0f141b;--cd:#18202a;--tx:#e8ecf2;--mu:#98a2b3;--ln:#2a3441;--ac:#6ea0ff;--E:#6ea0ff;--F:#f5a524;--m0:#2a3441;--m1:#27406f;--m2:#3a63b0;--m3:#5b8ae6;--m4:#9dbcff;--g:#34d399;--r:#f87171}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1100px;margin:0 auto;padding:18px 14px 40px}h1{font-size:24px;margin:0}h2{font-size:16px;margin:0 0 10px}h3{font-size:15px;margin:14px 0 4px}
+.s{color:var(--mu);font-size:13px}.fl{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:8px 0}.fl>span{font-size:13px;color:var(--mu);min-width:44px}
+button{font:inherit}.ch{border:1px solid var(--ln);background:var(--cd);color:var(--tx);padding:7px 14px;border-radius:99px;font-size:14px;cursor:pointer}.ch.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--ln);margin:14px 0;overflow-x:auto}.tab{border:0;background:none;color:var(--mu);padding:10px 14px;font-size:15px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}.tab.on{color:var(--tx);border-color:var(--ac);font-weight:600}
+.p{display:none}.p.on{display:block}
+.k{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}.k div,.c{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:14px}.k b{display:block;font-size:26px;line-height:1.1}.k span{color:var(--mu);font-size:13px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-bottom:14px}.c{margin-bottom:14px}.g .c{margin:0}
+.r{display:grid;grid-template-columns:96px 1fr 62px;gap:8px;align-items:center;margin:6px 0;font-size:14px}.t{height:15px;background:var(--bg);border-radius:4px;overflow:hidden}.t i{display:block;height:100%;background:var(--ac)}.t i.E{background:var(--E)}.t i.F{background:var(--F)}.r em{font-style:normal;text-align:right}
+.ok{border-left:4px solid var(--ac)}ul{margin:0;padding-left:20px}li{margin:6px 0}
+svg.map{width:100%;height:auto;max-height:70vh}svg.map path{stroke:var(--cd);stroke-width:.6;cursor:pointer}svg.map path.sel{stroke:var(--tx);stroke-width:1.8}
+.c0{fill:var(--m0)}.c1{fill:var(--m1)}.c2{fill:var(--m2)}.c3{fill:var(--m3)}.c4{fill:var(--m4)}
+.lg{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--mu);margin:8px 0}.lg b{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:4px;vertical-align:-2px}
+input{width:100%;padding:10px 12px;border:1px solid var(--ln);border-radius:8px;background:var(--bg);color:var(--tx);font-size:15px;margin-bottom:10px}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px;min-width:540px}th,td{padding:8px 6px;border-bottom:1px solid var(--ln);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}th{color:var(--mu)}
+.d{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:var(--mu);opacity:.5}.d.E{background:var(--E);opacity:1}.d.F{background:var(--F);opacity:1}
+.w2{border-left:4px solid var(--F)}
+.tag{display:inline-block;font-size:11px;padding:2px 6px;border-radius:4px;margin-left:4px;vertical-align:middle}
+.tag.ok{background:#d1fae5;color:#065f46}
+.badge{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;font-weight:600}
+.badge.g{background:#d1fae5;color:#065f46}
+.badge.r{background:#fee2e2;color:#991b1b}
+.spark{display:inline-block;width:60px;height:18px;vertical-align:middle}
+.scatter circle{opacity:.7;cursor:pointer}.scatter circle:hover{opacity:1;stroke:var(--tx);stroke-width:1.5}
+.toggle{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0;align-items:center}
+.toggle label{font-size:13px;color:var(--mu);cursor:pointer}
+.toggle input{width:auto;margin:0 4px 0 0}
+</style></head><body><div class="w">
+<h1>Caravanas 2024 – 2026 <span class="tag ok">v3</span></h1>
+<div class="s">Con población INEGI 2020, región COPLADEM, clave INEGI (001–125), eficiencia y cambios de sede. <b>2026 solo ene–jun</b>.</div>
+<div class="fl"><span>Año</span><span id="fy" class="fl" style="margin:0"></span></div>
+<div class="fl"><span>Sede</span><span id="ft" class="fl" style="margin:0"></span></div>
+<div class="s">Explanada = explanada, jardín central o kiosko. Fuera = cualquier otra sede.</div>
+<div class="tabs" id="tabs"></div>
+
+<div class="p" id="p0">
+<div class="k" id="k"></div>
+<div class="c ok"><h2>Respuesta corta: ¿vale la pena ir fuera de la explanada?</h2><ul><li><b>Con los datos actuales, no hay señal de que ir fuera de la explanada atienda a menos gente.</b> Promedio por visita (2024 a junio 2026): <b id="avgFuera"></b> personas fuera contra <b id="avgExpl"></b> en explanada.</li><li>Por año: <span id="porAnio"></span></li><li>Cuando el mismo municipio cambió de sede: de explanada a fuera <span id="cambioEF"></span>; de fuera a explanada <span id="cambioFE"></span>. Ver pestaña <b>Cambios de sede</b>.</li><li><b>Ojo:</b> la diferencia es moderada y no es concluyente. No prueba que la sede sea la causa.</li></ul></div>
+<div class="g">
+<div class="c"><h2>Personas por visita (promedio)</h2><div class="lg"><span><b style="background:var(--E)"></b>Explanada</span><span><b style="background:var(--F)"></b>Fuera</span></div><div id="bt"></div></div>
+<div class="c"><h2>Municipios con más personas atendidas</h2><div id="topList"></div></div>
+</div>
+<div class="c"><h2>Cobertura por cada 1,000 habitantes (2024–2026)</h2><div class="s">Personas atendidas acumuladas ÷ población municipal × 1,000.</div><div id="coberturaList" style="margin-top:8px"></div></div>
+</div>
+
+<div class="p" id="p1"><div class="c"><h2>Mapa del Estado de México</h2>
+<div class="toggle"><label><input type="radio" name="metric" value="visitas" checked> Visitas</label><label><input type="radio" name="metric" value="personas"> Personas</label><label><input type="radio" name="metric" value="cobertura"> Cobertura (×1,000 hab.)</label><label><input type="radio" name="metric" value="yoy"> Crecimiento 2025→2026*</label></div>
+<div class="s">*Comparativa ene–jun de 2025 vs ene–jun de 2026. Toca un municipio para ver el detalle.</div>
+<div id="inf" class="c" style="margin:10px 0;padding:10px">Toca un municipio.</div>
+<svg class="map" id="map" viewBox="0 0 700 706"></svg><div class="lg" id="lg"></div></div></div>
+
+<div class="p" id="p2"><div class="c"><h2>Municipios y visitas</h2><input id="q" type="search" placeholder="Buscar municipio…">
+<div class="toggle" id="colToggle"><label><input type="checkbox" data-col="cve"> Clave INEGI</label><label><input type="checkbox" data-col="pob" checked> Población</label><label><input type="checkbox" data-col="region" checked> Región</label><label><input type="checkbox" data-col="tramites"> Trámites</label><label><input type="checkbox" data-col="tpp"> Trámites/persona</label><label><input type="checkbox" data-col="spark"> Tendencia</label></div>
+<div class="tw"><table><thead><tr><th>Municipio</th><th>Visitas</th><th>2024</th><th>2025</th><th>2026</th><th>Personas</th><th class="c-cve">Cve.</th><th class="c-pob">Población</th><th class="c-region">Región</th><th class="c-tramites">Trámites</th><th class="c-tpp">Trám./pers.</th><th class="c-spark">Tend.</th></tr></thead><tbody id="tb"></tbody></table></div>
+<div class="s" style="margin-top:8px"><span class="d E"></span>explanada <span class="d F"></span>fuera <span class="d"></span>sin sede. “s/d” = visita sin dato de personas. “prog.” = sede asignada, sin visita registrada.</div></div></div>
+
+<div class="p" id="p3">
+<div class="k" id="kEff"></div>
+<div class="g">
+<div class="c"><h2>Personas por visita vs. Trámites por persona</h2><div class="s">Cada burbuja es un municipio. Tamaño = población atendida. Color = sede predominante.</div><svg id="scatter" viewBox="0 0 600 400" style="width:100%;height:auto"></svg><div class="lg"><span><b style="background:var(--E)"></b>Explanada</span><span><b style="background:var(--F)"></b>Fuera</span></div></div>
+<div class="c"><h2>Top 10 por trámites por persona</h2><div id="topTpp"></div></div>
+</div>
+<div class="c"><h2>Trámites por visita (promedio por año)</h2><div id="tramitesPorAnio"></div></div>
+</div>
+
+<div class="p" id="p4"><div class="c">
+<h2>Municipios que cambiaron de sede entre años</h2>
+<div class="s">Solo se incluyen municipios con al menos dos visitas en años distintos y sede registrada en ambas.</div>
+<div id="cambiosResumen" style="margin:10px 0"></div>
+<div class="tw"><table><thead><tr><th>Municipio</th><th>Cambio</th><th>Año</th><th>Personas antes</th><th>Personas después</th><th>Δ%</th><th>Trámites antes</th><th>Trámites después</th><th>Δ%</th></tr></thead><tbody id="tbCambios"></tbody></table></div>
+</div></div>
+
+<div class="p" id="p5"><div class="c w2"><h2>Notas metodológicas y limitaciones</h2>
+<h3>1. Supuestos clave</h3><ul>
+<li><b>Definición de “explanada”:</b> se tomó explanada, jardín central y kiosko. Todo lo demás cuenta como “fuera”.</li>
+<li><b>Atizapán:</b> el Excel trae “Atizapán” (con volumen alto, 2,826–3,376 personas) y “Santa Cruz Atizapán”. Se asumió que el primero es Atizapán de Zaragoza (013) por el tamaño de las cifras. “Santa Cruz Atizapán” se mapeó a Atizapán (012). “Santiago Tianguistenco” se mapeó a Tianguistenco (101).</li>
+<li><b>Municipios con dos visitas y dos sedes:</b> la primera sede se asignó a la primera visita y la segunda a la segunda.</li>
+<li><b>Población:</b> INEGI, Censo de Población y Vivienda 2020.</li>
+<li><b>Regionalización:</b> COPLADEM, aproximada; verificar con el Dictamen de División Regional vigente.</li>
+<li><b>2026 parcial:</b> solo enero–junio.</li></ul>
+<h3>2. Problemas en los datos de origen</h3><ul>
+<li><b>2026 llega solo a junio</b> y trae 31 sedes asignadas sin visita registrada.</li>
+<li><b>2024:</b> 19 visitas no tienen número de personas.</li>
+<li><b>Total de personas:</b> la columna “TOTAL BENEFICIADOS” del Excel solo suma primeras visitas (311,893). Aquí se suman también las segundas.</li>
+<li>Las columnas de variación del Excel tienen encabezados repetidos y muchos “-100%” que solo significan que no hubo visita al año siguiente.</li></ul>
+<h3>3. Lo que este análisis no puede decir</h3><ul>
+<li>No demuestra que la sede cause más o menos asistencia.</li>
+<li>No mide si “vale la pena”: no hay costo ni personal por visita.</li></ul>
+<h3>4. Mejoras ya aplicadas en v3</h3><ul>
+<li>Población INEGI 2020, región COPLADEM y clave INEGI para los 125 municipios.</li>
+<li>Pestaña <b>Eficiencia</b>: scatter personas/visita vs trámites/persona.</li>
+<li>Pestaña <b>Cambios de sede</b>: Δ% de personas y trámites.</li>
+<li>Mapa con métrica seleccionable.</li>
+<li>Columnas opcionales en la tabla.</li>
+<li>Cobertura por cada 1,000 habitantes.</li></ul>
+</div></div>
+</div>
+
+<script>
+// ============================================================
+// GEO: [cve INEGI, población 2020, región]
+// ============================================================
+const GEO = /*DATA:geo*/;
+function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,'').trim()}
+function getGeo(nombre){
+  let k=norm(nombre);
+  const alias={'atizapan':'atizapan de zaragoza','santa cruz atizapan':'atizapan','santiago tianguistenco':'tianguistenco','valle de chalco':'valle de chalco solidaridad'};
+  if(GEO[k]) return GEO[k];
+  if(alias[k]&&GEO[alias[k]]) return GEO[alias[k]];
+  return [null,null,'—'];
+}
+
+// ============================================================
+// DATOS DE MUNICIPIOS
+// ============================================================
+const M = /*DATA:municipios*/;
+const P = /*DATA:map_paths*/;
+const Y=[2024,2025,2026];let fy='all',ft='all',mapMetric='visitas';
+
+// Enriquecer municipios con cve, población y región
+M.forEach(m=>{const g=getGeo(m.n);m.cve=g[0];m.pob=g[1];m.region=g[2]});
+
+const $=i=>document.getElementById(i),eTabs=$('tabs'),eK=$('k'),eBt=$('bt'),eTop=$('topList'),eMap=$('map'),eLg=$('lg'),eInf=$('inf'),eTb=$('tb'),eQ=$('q'),eKEff=$('kEff'),eScatter=$('scatter'),eTopTpp=$('topTpp'),eTramitesPorAnio=$('tramitesPorAnio'),eCoberturaList=$('coberturaList'),eCambiosResumen=$('cambiosResumen'),eTbCambios=$('tbCambios');
+const fm=n=>Math.round(n).toLocaleString('es-MX'),sum=a=>a.reduce((x,y)=>x+y,0);
+const vis=(m,t)=>m.v.filter(v=>(fy=='all'||v[0]==fy)&&((t||ft)=='all'||v[2]==(t||ft)));
+const avg=a=>{a=a.filter(v=>v[3]!=null);return a.length?sum(a.map(v=>v[3]))/a.length:0};
+const med=a=>{a=a.filter(v=>v[3]!=null).map(v=>v[3]).sort((x,y)=>x-y);if(!a.length)return 0;const m=Math.floor(a.length/2);return a.length%2?a[m]:(a[m-1]+a[m])/2};
+
+const T=['Resumen','Mapa','Municipios','Eficiencia','Cambios de sede','Notas'];eTabs.innerHTML=T.map((t,i)=>`<button class="tab" data-i="${i}">${t}</button>`).join('');
+eTabs.onclick=e=>{if(e.target.dataset.i!=null)show(+e.target.dataset.i)};
+function show(i){[...eTabs.children].forEach((b,j)=>b.classList.toggle('on',i==j));T.forEach((_,j)=>document.getElementById('p'+j).classList.toggle('on',i==j))}
+function mk(id,items,cur,fn){const e=document.getElementById(id);e.innerHTML=items.map(i=>`<button class="ch${i[0]==cur?' on':''}" data-v="${i[0]}">${i[1]}</button>`).join('');e.onclick=ev=>{const v=ev.target.dataset.v;if(v==null)return;fn(v);mk(id,items,v,fn);draw()}}
+mk('fy',[['all','Todos'],...Y.map(y=>[y,y])],fy,v=>fy=v);
+mk('ft',[['all','Todas'],['E','Explanada'],['F','Fuera']],ft,v=>ft=v);
+function bars(r){const mx=Math.max(...r.map(x=>x[1]),1);return r.map(x=>`<div class="r"><span>${x[0]}</span><span class="t"><i class="${x[2]||''}" style="width:${x[1]/mx*100}%"></i></span><em>${fm(x[1])}</em></div>`).join('')}
+
+function draw(){
+const all=M.flatMap(m=>vis(m)),mu=M.filter(m=>vis(m).length),pe=all.filter(v=>v[3]!=null);
+let tr='';if(ft=='all')tr=`<div><b>${fm(sum(M.flatMap(m=>Object.entries(m.tr).filter(e=>fy=='all'||e[0]==fy).map(e=>e[1]))))}</b><span>Trámites</span></div>`;
+eK.innerHTML=[[mu.length,'Municipios visitados'],[all.length,'Visitas'],[sum(pe.map(v=>v[3])),'Personas atendidas'],[avg(all),'Personas por visita']].map(x=>`<div><b>${fm(x[0])}</b><span>${x[1]}</span></div>`).join('')+tr;
+const gE=avg(M.flatMap(m=>m.v.filter(v=>v[2]=='E'))),gF=avg(M.flatMap(m=>m.v.filter(v=>v[2]=='F')));
+$('avgFuera').textContent=fm(gF);$('avgExpl').textContent=fm(gE);
+$('porAnio').textContent=Y.map(y=>{const e=avg(M.flatMap(m=>m.v.filter(v=>v[0]==y&&v[2]=='E'))),f=avg(M.flatMap(m=>m.v.filter(v=>v[0]==y&&v[2]=='F')));return `${y}: fuera ${fm(f)} vs explanada ${fm(e)}`}).join(' · ');
+const ys=fy=='all'?Y:[+fy];eBt.innerHTML=ys.map(y=>{const g=t=>avg(M.flatMap(m=>m.v.filter(v=>v[0]==y&&v[2]==t)));return `<div class="s">${y}</div>`+bars([['Explanada',g('E'),'E'],['Fuera',g('F'),'F']])}).join('');
+const tot=m=>sum(vis(m).map(v=>v[3]||0));
+eTop.innerHTML=bars(M.filter(tot).sort((a,b)=>tot(b)-tot(a)).slice(0,10).map(m=>[m.n.length>13?m.n.slice(0,12)+'…':m.n,tot(m)]));
+const cobertura=M.filter(m=>m.pob&&tot(m)>0).map(m=>({n:m.n,cob:tot(m)/m.pob*1000})).sort((a,b)=>b.cob-a.cob);
+eCoberturaList.innerHTML=bars(cobertura.slice(0,15).map(c=>[c.n.length>14?c.n.slice(0,13)+'…':c.n,c.cob,'']));
+eMap.innerHTML=M.map((m,i)=>{let v=0;if(mapMetric==='visitas')v=vis(m).length;else if(mapMetric==='personas')v=vis(m).reduce((a,x)=>a+(x[3]||0),0);else if(mapMetric==='cobertura'){const t=vis(m).reduce((a,x)=>a+(x[3]||0),0);v=m.pob?t/m.pob*1000:0}else if(mapMetric==='yoy'){const p=vis(m).filter(x=>x[0]==2025).reduce((a,x)=>a+(x[3]||0),0);const a=vis(m).filter(x=>x[0]==2026).reduce((a,x)=>a+(x[3]||0),0);v=p?a/p:0}
+const cls=v==0?'c0':v<1?'c1':v<2?'c2':v<3?'c3':'c4';
+const cveStr=m.cve?String(m.cve).padStart(3,'0'):'—';
+return `<path data-i="${i}" class="${cls}" d="${P[m.g]}"><title>${cveStr} · ${m.n}: ${mapMetric==='yoy'?(v?v.toFixed(2)+'×':'—'):fm(v)}</title></path>`}).join('');
+const lv=mapMetric==='yoy'?['Sin dato','0–1×','1–1.5×','1.5–2×','2×+']:['Sin visita','1','2','3','4+'];
+eLg.innerHTML=lv.map((l,i)=>`<span><b class="c${i}" style="background:var(--m${i})"></b>${l}</span>`).join('');
+rows();rowsEff();rowsCambios()}
+
+eMap.onclick=e=>{const p=e.target.closest('path');if(!p)return;document.querySelectorAll('path.sel').forEach(x=>x.classList.remove('sel'));p.classList.add('sel');const m=M[p.dataset.i];
+const cveStr=m.cve?String(m.cve).padStart(3,'0'):'—';
+eInf.innerHTML=`<b>${cveStr} · ${m.n}</b> <span class="s">(${m.pob?fm(m.pob)+' hab.':'sin población'})</span><br><span class="s">${m.region}</span><br>`+(m.v.map(v=>`${v[0]}: <span class="d ${v[2]=='?'?'':v[2]}"></span>${v[2]=='E'?'explanada':v[2]=='F'?'fuera':'sin sede'}, ${v[3]==null?'s/d':fm(v[3])+' personas'}`).join('<br>')||'Sin visitas')+(m.pr.length?`<br><span class="s">Sede asignada sin visita registrada: ${m.pr.join(', ')}</span>`:'')};
+
+const colState={cve:false,pob:true,region:true,tramites:false,tpp:false,spark:false};
+document.querySelectorAll('#colToggle input').forEach(cb=>{cb.onchange=()=>{colState[cb.dataset.col]=cb.checked;document.querySelectorAll('.c-'+cb.dataset.col).forEach(el=>el.style.display=cb.checked?'':'none');rows()}});
+function rows(){const s=eQ.value.trim().toLowerCase(),tot=m=>sum(vis(m).map(v=>v[3]||0));
+eTb.innerHTML=M.filter(m=>m.n.toLowerCase().includes(s)).sort((a,b)=>tot(b)-tot(a)||a.n.localeCompare(b.n)).map(m=>{
+const c=Y.map(y=>{const v=vis(m).filter(x=>x[0]==y);if(!v.length)return m.pr.includes(y)&&(fy=='all'||fy==y)&&ft=='all'?'<td class="s">prog.</td>':'<td class="s">–</td>';return '<td>'+v.map(x=>`<span class="d ${x[2]=='?'?'':x[2]}"></span>${x[3]==null?'s/d':fm(x[3])}`).join('<br>')+'</td>'}).join('');
+const tr=sum(Y.map(y=>m.tr[y]||0)),pers=tot(m),tpp=pers?tr/pers:0;
+const vals=Y.map(y=>vis(m).filter(x=>x[0]==y).reduce((a,x)=>a+(x[3]||0),0)),mx=Math.max(...vals,1);
+const spark=`<svg class="spark" viewBox="0 0 60 18"><polyline points="${vals.map((v,i)=>`${i*30},${18-(v/mx*16)}`).join(' ')}" fill="none" stroke="var(--ac)" stroke-width="1.5"/></svg>`;
+const cveStr=m.cve?String(m.cve).padStart(3,'0'):'–';
+return `<tr><td>${m.n}</td><td>${vis(m).length}</td>${c}<td><b>${fm(pers)}</b></td>${colState.cve?`<td class="s">${cveStr}</td>`:''}${colState.pob?`<td>${m.pob?fm(m.pob):'–'}</td>`:''}${colState.region?`<td class="s">${m.region}</td>`:''}${colState.tramites?`<td>${fm(tr)}</td>`:''}${colState.tpp?`<td>${tpp?tpp.toFixed(2):'–'}</td>`:''}${colState.spark?`<td>${spark}</td>`:''}</tr>`}).join('')}
+eQ.oninput=rows;
+
+function rowsEff(){
+const mu=M.filter(m=>vis(m).length);
+const tppTotal=sum(mu.map(m=>sum(Y.map(y=>m.tr[y]||0))))/sum(mu.map(m=>sum(vis(m).map(v=>v[3]||0))));
+const pvTotal=avg(mu.flatMap(m=>vis(m)));
+eKEff.innerHTML=[[tppTotal.toFixed(2),'Trámites por persona'],[pvTotal,'Personas por visita'],[mu.length,'Municipios con visita'],[sum(mu.map(m=>Object.keys(m.tr).length)),'Visitas con trámites']].map(x=>`<div><b>${fm(x[0])}</b><span>${x[1]}</span></div>`).join('');
+const data=mu.filter(m=>m.pob).map(m=>{const pv=avg(vis(m)),tr=sum(Y.map(y=>m.tr[y]||0)),pers=sum(vis(m).map(v=>v[3]||0)),tpp=pers?tr/pers:0;const sede=vis(m).some(v=>v[2]=='F')?'F':'E';return {n:m.n,x:pv,y:tpp,r:Math.sqrt(m.pob)/30,sede,pers}}).filter(d=>d.x>0&&d.y>0);
+const mx=Math.max(...data.map(d=>d.x),1),my=Math.max(...data.map(d=>d.y),1);
+eScatter.innerHTML=`<line x1="50" y1="350" x2="580" y2="350" stroke="var(--ln)" stroke-width="1"/><line x1="50" y1="20" x2="50" y2="350" stroke="var(--ln)" stroke-width="1"/>`+
+data.map(d=>`<circle cx="${50+d.x/mx*530}" cy="${350-d.y/my*330}" r="${Math.max(3,Math.min(d.r,14))}" fill="${d.sede=='F'?'var(--F)':'var(--E)'}" class="scatter"><title>${d.n}\nPersonas/visita: ${d.x.toFixed(0)}\nTrámites/persona: ${d.y.toFixed(2)}</title></circle>`).join('')+
+`<text x="300" y="395" text-anchor="middle" fill="var(--mu)" font-size="11">Personas por visita</text><text x="15" y="185" text-anchor="middle" fill="var(--mu)" font-size="11" transform="rotate(-90,15,185)">Trámites por persona</text>`;
+const topTpp=mu.map(m=>{const pers=sum(vis(m).map(v=>v[3]||0)),tr=sum(Y.map(y=>m.tr[y]||0));return {n:m.n,tpp:pers?tr/pers:0,pers}}).filter(d=>d.pers>0).sort((a,b)=>b.tpp-a.tpp).slice(0,10);
+eTopTpp.innerHTML=bars(topTpp.map(d=>[d.n.length>14?d.n.slice(0,13)+'…':d.n,d.tpp,'']));
+eTramitesPorAnio.innerHTML=Y.map(y=>{const e=avg(M.flatMap(m=>m.v.filter(v=>v[0]==y&&v[2]=='E'))),f=avg(M.flatMap(m=>m.v.filter(v=>v[0]==y&&v[2]=='F')));return `<div class="s">${y}</div>`+bars([['Explanada',e,'E'],['Fuera',f,'F']])}).join('')}
+
+function rowsCambios(){
+const cambios=[];
+M.forEach(m=>{
+const byYear={};m.v.forEach(v=>{if(v[2]&&v[2]!='?'){if(!byYear[v[0]])byYear[v[0]]=[];byYear[v[0]].push(v)}});
+const years=Object.keys(byYear).map(Number).sort();
+for(let i=0;i<years.length-1;i++){const y1=years[i],y2=years[i+1];const s1=byYear[y1][0][2],s2=byYear[y2][0][2];
+if(s1!==s2){const p1=avg(byYear[y1]),p2=avg(byYear[y2]);const t1=sum(byYear[y1].map(v=>v[3]||0)),t2=sum(byYear[y2].map(v=>v[3]||0));const dP=p1?((p2-p1)/p1*100):null;cambios.push({n:m.n,de:s1,a:s2,y1,y2,p1,p2,dP,t1,t2});}}});
+cambios.sort((a,b)=>Math.abs(b.dP||0)-Math.abs(a.dP||0));
+eTbCambios.innerHTML=cambios.map(c=>{const dT=c.t1?((c.t2/c.t1-1)*100).toFixed(1)+'%':'–';return `<tr><td>${c.n}</td><td><span class="badge ${c.de=='E'?'g':'r'}">${c.de=='E'?'Explanada':'Fuera'}</span> → <span class="badge ${c.a=='E'?'g':'r'}">${c.a=='E'?'Explanada':'Fuera'}</span></td><td>${c.y1}→${c.y2}</td><td>${fm(c.p1)}</td><td>${fm(c.p2)}</td><td><b>${c.dP!=null?(c.dP>0?'+':'')+c.dP.toFixed(1)+'%':'–'}</b></td><td>${fm(c.t1)}</td><td>${fm(c.t2)}</td><td>${dT}</td></tr>`}).join('');
+const ef=cambios.filter(c=>c.de=='E'&&c.a=='F'),fe=cambios.filter(c=>c.de=='F'&&c.a=='E');
+const med=a=>{if(!a.length)return 0;a=a.map(x=>x.dP).filter(x=>x!=null).sort((x,y)=>x-y);const m=Math.floor(a.length/2);return a.length%2?a[m]:(a[m-1]+a[m])/2};
+eCambiosResumen.innerHTML=`<b>${cambios.length} cambios de sede detectados</b> · Explanada→Fuera: ${ef.length} casos (mediana Δ: ${med(ef).toFixed(1)}%) · Fuera→Explanada: ${fe.length} casos (mediana Δ: ${med(fe).toFixed(1)}%)`;
+$('cambioEF').textContent=ef.length?`la mediana de cambio fue ${med(ef).toFixed(1)}% (${ef.length} casos)`:'no hay casos suficientes';
+$('cambioFE').textContent=fe.length?`la mediana de cambio fue ${med(fe).toFixed(1)}% (${fe.length} casos)`:'no hay casos suficientes';
+}
+
+document.querySelectorAll('input[name="metric"]').forEach(r=>r.onchange=()=>{mapMetric=r.value;draw()});
+show(0);draw();
+</script></body></html>

@@ -1,0 +1,126 @@
+nombre,cve,poblacion,region
+Acambay,1,67872,R11 Jilotepec
+Acolman,2,171507,R06 Tecámac
+Aculco,3,49266,R11 Jilotepec
+Almoloya de Alquisiras,4,15333,R18 Sultepec
+Almoloya de Juarez,5,174587,R14 Toluca
+Almoloya del Río,6,12694,R14 Toluca
+Amanalco,7,23675,R13 Valle de Bravo
+Amatepec,8,25244,R19 Tejupilco
+Amecameca,9,53441,R01 Chalco
+Apaxco,10,31898,R07 Zumpango
+Atenco,11,75489,R03 Texcoco
+Atizapán,12,12984,R16 Lerma
+Atlacomulco,13,109384,R12 Ixtlahuaca
+Atlautla,14,31900,R01 Chalco
+Axapusco,15,29128,R06 Tecámac
+Ayapango,16,10053,R01 Chalco
+Calimaya,17,68489,R14 Toluca
+Capulhuac,18,36921,R16 Lerma
+Chalco,19,400057,R01 Chalco
+Chapa de Mota,20,31737,R11 Jilotepec
+Chapultepec,21,12772,R16 Lerma
+Chiautla,22,30045,R03 Texcoco
+Chicoloapan,23,200750,R03 Texcoco
+Chiconcuac,24,27692,R03 Texcoco
+Chimalhuacan,25,705193,R03 Texcoco
+Coacalco,26,293444,R08 Tultitlán
+Coatepec Harinas,27,38643,R17 Tenancingo
+Cocotitlán,28,15107,R01 Chalco
+Coyotepec,29,40885,R07 Zumpango
+Cuautitlán,30,178847,R08 Tultitlán
+Cuautitlán Izcalli,31,555163,R09 Tlalnepantla
+Donato Guerra,32,37436,R13 Valle de Bravo
+Ecatepec,33,1645352,R05 Ecatepec
+Ecatzingo,34,10827,R01 Chalco
+El Oro,35,36937,R12 Ixtlahuaca
+Huehuetoca,36,163244,R07 Zumpango
+Hueypoxtla,37,46757,R07 Zumpango
+Huixquilucan,38,284965,R15 Naucalpan
+Isidro Fabela,39,11929,R10 Nicolás Romero
+Ixtapaluca,40,542211,R02 Ixtapaluca
+Ixtapan de la Sal,41,36911,R17 Tenancingo
+Ixtapan del Oro,42,6475,R13 Valle de Bravo
+Ixtlahuaca,43,160139,R12 Ixtlahuaca
+Jaltenco,44,28217,R08 Tultitlán
+Jilotepec,45,87671,R11 Jilotepec
+Jilotzingo,46,19877,R10 Nicolás Romero
+Jiquipilco,47,76826,R12 Ixtlahuaca
+Jocotitlán,48,69264,R12 Ixtlahuaca
+Joquicingo,49,15428,R17 Tenancingo
+Juchitepec,50,27116,R01 Chalco
+La Paz,51,304088,R02 Ixtapaluca
+Lerma,52,170327,R16 Lerma
+Luvianos,53,28822,R19 Tejupilco
+Malinalco,54,28155,R17 Tenancingo
+Melchor Ocampo,55,61220,R08 Tultitlán
+Metepec,56,242307,R14 Toluca
+Mexicaltzingo,57,13807,R14 Toluca
+Morelos,58,33164,R11 Jilotepec
+Naucalpan,59,834434,R15 Naucalpan
+Nextlalpan,60,57082,R08 Tultitlán
+Nezahualcóyotl,61,1077208,R04 Nezahualcóyotl
+Nicolas Romero,62,430601,R10 Nicolás Romero
+Nopaltepec,63,10351,R06 Tecámac
+Ocoyoacac,64,72103,R16 Lerma
+Ocuilan,65,36223,R17 Tenancingo
+Otumba,66,36331,R06 Tecámac
+Otzoloapan,67,4891,R13 Valle de Bravo
+Otzolotepec,68,88783,R10 Nicolás Romero
+Ozumba,69,30785,R01 Chalco
+Papalotla,70,4862,R03 Texcoco
+Polotitlán,71,14985,R11 Jilotepec
+Rayón,72,15972,R17 Tenancingo
+San Antonio la Isla,73,31962,R16 Lerma
+San Felipe del Progreso,74,144924,R12 Ixtlahuaca
+San Jose del Rincón,75,100082,R12 Ixtlahuaca
+San Martín de las Piramides,76,29182,R06 Tecámac
+San Mateo Atenco,77,97418,R14 Toluca
+San Simon de Guerrero,78,6692,R18 Sultepec
+Santa Cruz Atizapan,79,12984,R16 Lerma
+Santiago Tianguistenco,80,84259,R16 Lerma
+Santo Tomas,81,9729,R13 Valle de Bravo
+Soyaniquilpan,82,14323,R11 Jilotepec
+Sultepec,83,24145,R18 Sultepec
+Tecamac,84,547503,R06 Tecámac
+Tejupilco,85,79282,R19 Tejupilco
+Temamatla,86,14130,R01 Chalco
+Temascalapa,87,43593,R06 Tecámac
+Temascalcingo,88,66414,R11 Jilotepec
+Temascaltepec,89,35014,R13 Valle de Bravo
+Temoaya,90,105766,R10 Nicolás Romero
+Tenancingo,91,104677,R17 Tenancingo
+Tenango del Aire,92,11359,R01 Chalco
+Tenango del Valle,93,90518,R17 Tenancingo
+Teoloyucan,94,65459,R07 Zumpango
+Teotihuacan,95,58507,R06 Tecámac
+Tepetlaoxtoc,96,32564,R03 Texcoco
+Tepetlixpa,97,20500,R01 Chalco
+Tepotzotlan,98,103696,R07 Zumpango
+Tequixquiac,99,39489,R07 Zumpango
+Texcaltitlan,100,18482,R18 Sultepec
+Texcalyacac,101,5736,R16 Lerma
+Texcoco,102,277562,R03 Texcoco
+Tezoyuca,103,47044,R03 Texcoco
+Timilpan,104,16414,R11 Jilotepec
+Tlalmanalco,105,49196,R01 Chalco
+Tlalnepantla,106,672202,R09 Tlalnepantla
+Tlatlaya,107,31762,R19 Tejupilco
+Toluca,108,910608,R14 Toluca
+Tonanitla,109,14883,R08 Tultitlán
+Tonatico,110,12912,R17 Tenancingo
+Tultepec,111,157645,R08 Tultitlán
+Tultitlán,112,516341,R08 Tultitlán
+Valle de Bravo,113,61590,R13 Valle de Bravo
+Valle de Chalco,114,391731,R02 Ixtapaluca
+Villa de Allende,115,53275,R13 Valle de Bravo
+Villa del Carbón,116,51498,R11 Jilotepec
+Villa Guerrero,117,69086,R17 Tenancingo
+Villa Victoria,118,108196,R12 Ixtlahuaca
+Xalatlaco,119,30687,R16 Lerma
+Xonacatlan,120,54633,R10 Nicolás Romero
+Zacazonapan,121,5109,R13 Valle de Bravo
+Zacualpan,122,13522,R18 Sultepec
+Zinacantepec,123,203872,R14 Toluca
+Zumpahuacan,124,18833,R17 Tenancingo
+Zumpango,125,280455,R07 Zumpango

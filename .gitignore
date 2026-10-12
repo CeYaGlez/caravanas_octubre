@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.streamlit/secrets.toml
+
+# Respaldos
+*.bak
+
+# Sistema
+.DS_Store
