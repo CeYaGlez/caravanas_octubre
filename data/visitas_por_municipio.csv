@@ -3,6 +3,7 @@ Malinalco,5,6500,2042
 Naucalpan de Juárez,5,30928,11068
 San Martín de las Pirámides,5,11459,5457
 Acolman,4,15100,6791
+Amanalco de Becerra,4,6860,2282
 Apaxco,4,6735,2488
 Axapusco,4,7598,2814
 Chalco,4,23277,10523
@@ -17,6 +18,7 @@ Nopaltepec,4,4901,1840
 Otumba,4,6567,2836
 Otzolotepec,4,10754,3403
 Temoaya,4,13084,3309
+Tenango del Valle,4,13282,5165
 Tepotzotlán,4,23808,9003
 Texcaltitlán,4,4973,2771
 Tonatico,4,5345,1324
@@ -26,7 +28,6 @@ Acambay de Ruíz Castañeda,3,5207,1631
 Aculco,3,3170,1076
 Almoloya de Alquisiras,3,3070,948
 Almoloya del Río,3,4297,1668
-Amanalco de Becerra,3,4007,1309
 Amatepec,3,4008,1405
 Amecameca,3,11048,4524
 Atenco,3,8068,3412
@@ -75,7 +76,6 @@ Temascalapa,3,7841,3046
 Temascalcingo,3,6258,1989
 Temascaltepec,3,5830,1899
 Tenango del Aire,3,3650,1748
-Tenango del Valle,3,11035,4505
 Teotihuacán,3,10898,4199
 Tepetlaoxtoc,3,5413,2376
 Tepetlixpa,3,6479,2375
@@ -122,8 +122,6 @@ Tlalmanalco,2,3590,1259
 Villa del Carbón,2,3549,1468
 Xonacatlán,2,3715,1482
 Zacualpan,2,3244,830
-"Almoloya (sin especificar: ¿Juárez, Río o Alquisiras?)",1,7017,1241
-Amanalco,1,2853,973
+Almoloya (por confirmar),1,7017,1241
 Chiautla,1,3630,1450
-Jajalpa Tenango,1,2247,660
 Villa Victoria,1,4345,1526
