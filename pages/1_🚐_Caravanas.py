@@ -17,14 +17,38 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Ocultamos el menú de Streamlit y el footer.
+# Ocultamos el menú de Streamlit, el toolbar (Deploy) y el footer.
+# Dejamos visible el botón « del sidebar.
 st.markdown(
     """
     <style>
-      #MainMenu, footer {visibility: hidden;}
-      .block-container {padding: 0 !important; max-width: 100% !important;}
+      /* Oculta Deploy, menú, "Running…" */
+      [data-testid="stToolbar"] {display: none !important;}
+      [data-testid="stDecoration"] {display: none !important;}
+      [data-testid="stStatusWidget"] {display: none !important;}
+      #MainMenu {visibility: hidden;}
+      footer {visibility: hidden;}
 
-      /* Toggle centrado y con aire arriba */
+      /* Header: transparente, pequeño y SIN capturar clics */
+      header[data-testid="stHeader"] {
+        background: transparent;
+        height: 2.5rem;
+        pointer-events: none;
+      }
+      /* Devolvemos clic solo al botón « del sidebar */
+      [data-testid="stSidebarCollapsedControl"] {
+        pointer-events: auto;
+        top: 8px;
+        left: 8px;
+      }
+
+      /* Contenido con un poco de aire arriba para no pegarse */
+      .block-container {
+        padding: 1.25rem 0 0 !important;
+        max-width: 100% !important;
+      }
+
+      /* Toggle centrado y con aire */
       div[role="radiogroup"] {
         justify-content: center;
         gap: 22px;

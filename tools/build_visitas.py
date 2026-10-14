@@ -8,32 +8,27 @@ Salida:
     data/visitas_por_municipio.csv   ← entregable: 125 municipios + 1 pendiente
     data/caravanas_detalle.csv       ← las 373 caravanas crudas
 
-Reglas de limpieza:
-    - "Amanalco" se fusiona con "Amanalco de Becerra"
-    - "Jajalpa Tenango" se fusiona con "Tenango del Valle"
-    - "Almoloya (sin especificar: …)" → "Almoloya (por confirmar)"
+Reglas de limpieza: definidas en src/municipios_const.py (FUSIONES y RENOMBRES),
+compartidas con src/data.py para que el panel cuente igual que estos CSVs.
 
 Uso:
     python tools/build_visitas.py
 """
-import pandas as pd
+import sys
 from pathlib import Path
 
+import pandas as pd
+
 ROOT = Path(__file__).resolve().parent.parent
-RAW  = ROOT / "data" / "raw" / "conteo_visitas.xlsx"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from src.municipios_const import FUSIONES, RENOMBRES # ← compartido
+
+
+RAW         = ROOT / "data" / "raw" / "conteo_visitas.xlsx"
 OUT_MUNI    = ROOT / "data" / "visitas_por_municipio.csv"
 OUT_DETALLE = ROOT / "data" / "caravanas_detalle.csv"
-
-# Fusiones: nombre_viejo → nombre_nuevo (se suman visitas/trámites/personas)
-FUSIONES = {
-    "Amanalco": "Amanalco de Becerra",
-    "Jajalpa Tenango": "Tenango del Valle",
-}
-
-# Renombres simples (sin sumar nada, solo cambia la etiqueta)
-RENOMBRES = {
-    "Almoloya (sin especificar: ¿Juárez, Río o Alquisiras?)": "Almoloya (por confirmar)",
-}
 
 
 def main():

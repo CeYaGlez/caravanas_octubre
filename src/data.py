@@ -14,6 +14,7 @@ from functools import lru_cache
 import pandas as pd
 
 from src.paths import EXCEL_CSV, MUNICIPIOS_CSV
+from src.municipios_const import normalizar as _normalizar_municipio   # ← NUEVA
 
 
 # ---------------------------------------------------------------- modelos
@@ -97,6 +98,7 @@ def load_municipios() -> dict[str, Municipio]:
         nombre = _clean_nombre(row.get("Municipio", ""))
         if not nombre or nombre == "#":
             continue
+        nombre = _normalizar_municipio(nombre)
 
         m = out.setdefault(nombre, Municipio(nombre=nombre))
 
@@ -107,7 +109,7 @@ def load_municipios() -> dict[str, Municipio]:
             tr = _to_int(row.get(f"Trámites {anio}", ""))
 
             if tr is not None:
-                m.tramites[anio] = tr
+                m.tramites[anio] = m.tramites.get(anio, 0) + tr
 
             sede = _classify_sede(sede_raw)
 
