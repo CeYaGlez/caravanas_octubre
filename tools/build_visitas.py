@@ -1,11 +1,7 @@
-"""
-Genera los CSVs limpios del conteo de visitas.
-Entrada: data/raw/informe_acumulado.csv (373 filas)
-Salida: data/visitas_por_municipio.csv y data/caravanas_detalle.csv
-"""
 import sys
 from pathlib import Path
 import pandas as pd
+import re
 
 ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
@@ -18,19 +14,30 @@ OUT_MUNI    = ROOT / "data" / "visitas_por_municipio.csv"
 OUT_DETALLE = ROOT / "data" / "caravanas_detalle.csv"
 
 def main():
-    df = pd.read_csv(
-        RAW, skiprows=12, encoding="utf-8-sig", header=None,
-        names=["nc", "municipio_original", "tramites", "personas", "x1", "x2"],
-    )
-    df = df[df["nc"].astype(str).str.strip().str.match(r"^\d+\.$", na=False)].copy()
+    # Leemos sin saltarnos filas fijas para que sea inmune a cambios de formato
+    df = pd.read_csv(RAW, encoding="utf-8-sig", header=None)
+    
+    # Buscamos la fila donde empiezan los datos (la que dice "1" o "1." en la columna 1)
+    start_idx = 0
+    for i, val in enumerate(df[1]):
+        if str(val).strip() in ("1", "1."):
+            start_idx = i
+            break
+
+    # Extraemos solo las columnas que nos importan
+    df = df.iloc[start_idx:, [1, 2, 3, 4]].copy()
+    df.columns = ["nc", "municipio_original", "tramites", "personas"]
+
+    # Limpiamos el número de caravana (le quitamos el punto si lo tiene)
+    df["nc"] = df["nc"].astype(str).str.replace(".", "", regex=False).str.strip()
+    
+    # Filtramos solo las filas donde nc sea un número puro (1 a 373)
+    df = df[df["nc"].str.match(r"^\d+$", na=False)].copy()
 
     df["municipio_original"] = df["municipio_original"].astype(str).str.strip()
     df["municipio"] = df["municipio_original"].apply(normalizar)
 
-    df["tramites"] = pd.to_numeric(
-        df["tramites"].astype(str).str.replace(",", "").str.strip(), errors="coerce"
-    ).fillna(0).astype(int)
-
+    df["tramites"] = pd.to_numeric(df["tramites"].astype(str).str.replace(",", "").str.strip(), errors="coerce").fillna(0).astype(int)
     df["personas"] = pd.to_numeric(df["personas"], errors="coerce").fillna(0).astype(int)
 
     # Detalle
@@ -55,8 +62,6 @@ def main():
     print(f"    Visitas:   {municipios['Visitas'].sum()}")
     print(f"    Trámites:  {municipios['Trámites'].sum():,}")
     print(f"    Personas:  {municipios['Personas'].sum():,}")
-    print(f"\n✓ {OUT_DETALLE.relative_to(ROOT)}")
-    print(f"    Caravanas: {len(detalle)}")
 
 if __name__ == "__main__":
     main()

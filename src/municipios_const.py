@@ -25,6 +25,7 @@ ALIAS = {
     "Villa guerrero":              "Villa Guerrero",
     "Xonacatlan":                  "Xonacatlán",
     "Atizapan de Zaragoza":        "Atizapán de Zaragoza",
+    "Atizapán":                    "Atizapán (Santa Cruz)",
 
     # Puntos finales (errores de captura)
     "Cuautitlán Izcalli.":         "Cuautitlán Izcalli",
