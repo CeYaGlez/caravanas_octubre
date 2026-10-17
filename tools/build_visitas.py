@@ -1,89 +1,62 @@
 """
 Genera los CSVs limpios del conteo de visitas.
-
-Entrada:
-    data/raw/conteo_visitas.xlsx
-
-Salida:
-    data/visitas_por_municipio.csv   ← entregable: 125 municipios + 1 pendiente
-    data/caravanas_detalle.csv       ← las 373 caravanas crudas
-
-Reglas de limpieza: definidas en src/municipios_const.py (FUSIONES y RENOMBRES),
-compartidas con src/data.py para que el panel cuente igual que estos CSVs.
-
-Uso:
-    python tools/build_visitas.py
+Entrada: data/raw/informe_acumulado.csv (373 filas)
+Salida: data/visitas_por_municipio.csv y data/caravanas_detalle.csv
 """
 import sys
 from pathlib import Path
-
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from src.municipios_const import FUSIONES, RENOMBRES # ← compartido
+from src.municipios_const import normalizar
 
-
-RAW         = ROOT / "data" / "raw" / "conteo_visitas.xlsx"
+RAW         = ROOT / "data" / "raw" / "informe_acumulado.csv"
 OUT_MUNI    = ROOT / "data" / "visitas_por_municipio.csv"
 OUT_DETALLE = ROOT / "data" / "caravanas_detalle.csv"
 
-
 def main():
-    # ---------- 1. Conteo por municipio (el entregable) ----------
-    df = pd.read_excel(RAW, sheet_name="Conteo por municipio")
+    df = pd.read_csv(
+        RAW, skiprows=12, encoding="utf-8-sig", header=None,
+        names=["nc", "municipio_original", "tramites", "personas", "x1", "x2"],
+    )
+    df = df[df["nc"].astype(str).str.strip().str.match(r"^\d+\.$", na=False)].copy()
 
-    municipios = df[["Municipio", "Visitas", "Trámites", "Personas"]].copy()
+    df["municipio_original"] = df["municipio_original"].astype(str).str.strip()
+    df["municipio"] = df["municipio_original"].apply(normalizar)
 
-    for col in ["Visitas", "Trámites", "Personas"]:
-        municipios[col] = pd.to_numeric(municipios[col], errors="coerce").fillna(0).astype(int)
+    df["tramites"] = pd.to_numeric(
+        df["tramites"].astype(str).str.replace(",", "").str.strip(), errors="coerce"
+    ).fillna(0).astype(int)
 
-    # Renombrar y luego fusionar
-    municipios["Municipio"] = municipios["Municipio"].replace(RENOMBRES)
-    municipios["Municipio"] = municipios["Municipio"].replace(FUSIONES)
+    df["personas"] = pd.to_numeric(df["personas"], errors="coerce").fillna(0).astype(int)
 
+    # Detalle
+    detalle = df[["nc", "municipio_original", "municipio", "tramites", "personas"]].rename(
+        columns={"municipio_original": "municipio_en_excel", "municipio": "municipio_normalizado"}
+    )
+    detalle.to_csv(OUT_DETALLE, index=False, encoding="utf-8-sig")
+
+    # Conteo
     municipios = (
-        municipios
-        .groupby("Municipio", as_index=False)
-        .agg({"Visitas": "sum", "Trámites": "sum", "Personas": "sum"})
+        df.groupby("municipio")
+        .agg(Visitas=("municipio", "size"), Trámites=("tramites", "sum"), Personas=("personas", "sum"))
+        .reset_index()
+        .rename(columns={"municipio": "Municipio"})
         .sort_values(["Visitas", "Municipio"], ascending=[False, True])
         .reset_index(drop=True)
     )
-
     municipios.to_csv(OUT_MUNI, index=False, encoding="utf-8-sig")
 
-    # ---------- 2. Detalle de las 373 caravanas ----------
-    detalle = pd.read_excel(RAW, sheet_name="Detalle caravanas")
-    detalle = (
-        detalle[["Nc.", "Municipio normalizado", "Trámites", "Personas", "Nota"]]
-        .rename(columns={
-            "Nc.": "nc",
-            "Municipio normalizado": "municipio",
-            "Trámites": "tramites",
-            "Personas": "personas",
-            "Nota": "nota",
-        })
-    )
-    detalle["tramites"] = pd.to_numeric(detalle["tramites"], errors="coerce").fillna(0).astype(int)
-    detalle["personas"] = pd.to_numeric(detalle["personas"], errors="coerce").fillna(0).astype(int)
-    detalle["nota"] = detalle["nota"].fillna("")
-
-    detalle.to_csv(OUT_DETALLE, index=False, encoding="utf-8-sig")
-
-    # ---------- 3. Verificación ----------
     print(f"✓ {OUT_MUNI.relative_to(ROOT)}")
-    print(f"    Filas:     {len(municipios)}   (125 reales + 1 pendiente)")
+    print(f"    Filas:     {len(municipios)}   (esperado 125)")
     print(f"    Visitas:   {municipios['Visitas'].sum()}")
     print(f"    Trámites:  {municipios['Trámites'].sum():,}")
     print(f"    Personas:  {municipios['Personas'].sum():,}")
-    print()
-    print(f"✓ {OUT_DETALLE.relative_to(ROOT)}")
+    print(f"\n✓ {OUT_DETALLE.relative_to(ROOT)}")
     print(f"    Caravanas: {len(detalle)}")
-    print(f"    Trámites:  {detalle['tramites'].sum():,}")
-    print(f"    Personas:  {detalle['personas'].sum():,}")
-
 
 if __name__ == "__main__":
     main()

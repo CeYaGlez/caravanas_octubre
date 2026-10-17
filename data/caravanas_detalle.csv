@@ -1,374 +1,374 @@
-﻿nc,municipio,tramites,personas,nota
-1,Tepetlixpa,1371,525,
-2,Ocuilan,897,531,
-3,Malinalco,1428,598,
-4,Ozumba,899,493,
-5,Tenango del Aire,1180,675,
-6,Texcaltitlán,1644,1858,
-7,Cocotitlán,616,277,
-8,Almoloya de Alquisiras,760,358,
-9,Acambay de Ruíz Castañeda,1133,464,
-10,Acolman,1765,948,
-11,Aculco,664,261,
-12,San Martín de las Pirámides,767,378,
-13,Almoloya del Río,1682,580,
-14,Jaltenco,2078,892,
-15,Capulhuac,647,230,
-16,Teoloyucan,740,311,
-17,Valle de Bravo,1833,767,
-18,Ixtapan del Oro,637,213,
-19,Temascaltepec,1531,363,
-20,Coyotepec,1543,632,
-21,Santo Tomás de los Plátanos,865,226,
-22,Valle de Chalco Solidaridad,3074,1097,
-23,Ixtapan de la Sal,2304,544,
-24,Ixtapaluca,5091,1819,
-25,Tonatico,1681,369,
-26,Tenango del Valle,2571,1143,
-27,La Paz,7187,2774,
-28,Xalatlaco,1615,574,
-29,Nezahualcóyotl,18223,6317,
-30,Calimaya,3342,1011,
-31,Chimalhuacán,11283,4227,
-32,Temoaya,1869,622,
-33,Texcoco,7918,3154,
-34,Chalco,3163,1882,
-35,Tlatlaya,1146,388,
-36,Amatepec,1075,333,
-37,Otumba,1629,699,
-38,Tecámac,9619,3792,
-39,Metepec,2918,1089,
-40,San Antonio la Isla,3090,950,
-41,Ecatepec de Morelos,9441,2211,
-42,Toluca,6505,2518,
-43,Tlalnepantla de Baz,10168,4335,
-44,Donato Guerra,1449,441,
-45,Coacalco de Berriozábal,9312,2809,
-46,Amanalco de Becerra,1090,229,
-47,San Martín de las Pirámides,2376,969,
-48,Ixtlahuaca,2971,1161,
-49,Zumpango,4164,1706,
-50,Xonacatlán,2009,861,
-51,Chapultepec,812,297,
-52,Hueypoxtla,1248,488,
-53,Malinalco,1213,408,
-54,Apaxco,988,367,
-55,Chalco,1450,459,
-56,Huehuetoca,5251,2757,Nombre unificado con otra variante
-57,Villa del Carbón,2040,929,
-58,Tepotzotlán,5414,2093,
-59,Atlacomulco,2557,1149,
-60,Morelos,1035,259,
-61,Cuautitlán,5497,1648,Por revisar: ver hoja Por revisar
-62,Temascalcingo,2585,852,
-63,El Oro,1596,484,
-64,Jilotepec,3217,693,
-65,Tultepec,4952,1592,
-66,Soyaniquilpan de Juárez,1002,386,
-67,Zinacantepec,1573,563,
-68,Nicolás Romero,2758,946,
-69,Cuautitlán Izcalli,6884,2979,
-70,Atizapán de Zaragoza,7870,2826,
-71,Naucalpan de Juárez,7718,2731,
-72,Atenco,2871,1242,
-73,Otzolotepec,3913,1044,
-74,Tezoyuca,2188,618,
-75,Isidro Fabela,1630,461,
-76,Jiquipilco,2242,695,
-77,Teotihuacán,4223,1381,
-78,Amecameca,3915,1816,
-79,San Felipe del Progreso,3063,1115,
-80,Villa de Allende,961,306,
-81,Ayapango,1331,458,
-82,Tultitlán,7258,2825,
-83,Polotitlán,1069,321,
-84,Timilpan,2304,600,
-85,Juchitepec,2293,1157,
-86,Jocotitlán,4405,1799,
-87,Temamatla,3417,1217,
-88,Cuautitlán Izcalli,17441,6327,
-89,Papalotla,954,379,
-90,Tepetlaoxtoc,1947,824,
-91,Villa Victoria,4345,1526,
-92,Chiconcuac,1721,582,
-93,Chicoloapan,9146,3383,
-94,Almoloya de Juárez,6302,3389,
-95,Ecatzingo,1735,452,
-96,Coatepec Harinas,1779,769,
-97,Atlautla,2378,833,
-98,Villa Guerrero,1808,509,Nombre unificado con otra variante
-99,Chiautla,3630,1450,
-100,Tenancingo,4195,1509,
-101,Nextlalpan,6741,1974,
-102,Ocoyoacac,2400,987,
-103,San Mateo Atenco,4206,1998,
-104,Ecatepec de Morelos,12671,4223,
-105,Santiago Tianguistenco,3971,1343,Por revisar: ver hoja Por revisar
-106,Atizapán (Santa Cruz),2069,560,Por revisar: ver hoja Por revisar
-107,Lerma,4416,1540,
-108,Mexicaltzingo,747,272,
-109,Rayón,1505,537,
-110,Jilotzingo,674,232,
-111,Texcalyacac,1629,345,
-112,Tequixquiac,2590,1009,
-113,Temascalapa,3121,1136,
-114,Zumpahuacan,2403,466,
-115,Axapusco,1559,514,
-116,Zacualpan,2334,603,
-117,Tonanitla,2323,913,
-118,Sultepec,1952,424,
-119,Nopaltepec,979,385,
-120,Tejupilco,2857,900,
-121,Melchor Ocampo,3157,1082,
-122,Luvianos,974,196,
-123,Naucalpan de Juárez,4044,1161,
-124,Otzoloapan,833,150,
-125,Zacazonapan,852,117,
-126,San Simon de Guerrero,1538,325,
-127,Tlalmanalco,2232,760,
-128,Tlalnepantla de Baz,9698,2904,
-129,Texcaltitlán,1648,363,Nombre unificado con otra variante
-130,Almoloya de Alquisiras,1708,365,
-131,Coacalco de Berriozábal,5633,1952,
-132,Ixtapan de la Sal,3964,465,
-133,Otzolotepec,1522,648,
-134,Tonatico,1535,334,
-135,San José del Rincón,1619,724,Nombre unificado con otra variante
-136,Malinalco,1185,362,
-137,La Paz,7645,3211,
-138,Tenango del Valle,5276,1723,
-139,Nezahualcóyotl,13573,4542,
-140,Chapa de Mota,1082,398,
-141,Almoloya del Río,1147,338,
-142,Chimalhuacán,10203,3647,Nombre unificado con otra variante
-143,Xalatlaco,2922,1038,
-144,Texcoco,7160,2787,
-145,Chalco,10247,4742,
-146,Acolman,4863,1665,
-147,San Antonio la Isla,2737,754,
-148,Chapultepec,1844,439,
-149,Tepetlixpa,3621,957,
-150,Tultepec,3670,2565,
-151,Tlatlaya,756,346,
-152,Amatepec,1933,688,
-153,Ecatzingo,1275,182,
-154,Juchitepec,4835,1217,
-155,Temoaya,6775,1084,
-156,Tepotzotlán,7388,2635,Nombre unificado con otra variante
-157,Ayapango,1355,390,
-158,Amecameca,5175,1802,
-159,Nextlalpan,2695,628,
-160,Ocoyoacac,3660,795,
-161,Tezoyuca,2392,673,
-162,Cocotitlán,2361,818,
-163,Jiquipilco,5582,1550,
-164,Temascalcingo,2455,681,
-165,Otumba,1493,730,
-166,Teotihuacán,3812,1352,Nombre unificado con otra variante
-167,Villa del Carbón,1509,539,
-168,Acambay de Ruíz Castañeda,2584,650,
-169,Villa de Allende,2383,865,
-170,Tepetlaoxtoc,2155,850,
-171,Aculco,1474,449,
-172,Jaltenco,3129,825,
-173,Ixtapan del Oro,1717,478,
-174,Jilotepec,3893,1243,
-175,Valle de Chalco Solidaridad,3579,1708,
-176,Coyotepec,4072,1591,
-177,Morelos,1846,393,
-178,Huehuetoca,14167,4511,
-179,Amanalco,2853,973,
-180,Atlacomulco,6943,1795,
-181,Temascaltepec,3074,1246,
-182,Cuautitlán,7947,2518,Por revisar: ver hoja Por revisar
-183,San Martín de las Pirámides,5349,2533,Nombre unificado con otra variante
-184,Villa Guerrero,3715,914,
-185,Joquicingo,1172,505,
-186,Apaxco,2413,869,
-187,Atizapán (Santa Cruz),1142,1038,Por revisar: ver hoja Por revisar
-188,Ocuilan,1254,303,
-189,Temascalapa,2069,693,
-190,San Mateo Atenco,2274,1411,
-191,Calimaya,2313,526,
-192,Nopaltepec,1107,280,
-193,Nicolás Romero,10463,3691,
-194,Capulhuac,1003,319,
-195,Axapusco,1953,643,
-196,Xonacatlán,1706,621,Nombre unificado con otra variante
-197,Chicoloapan,3487,907,
-198,Zumpango,2611,1196,
-199,Metepec,1579,855,
-200,Chiconcuac,1946,471,
-201,Tecámac,10644,3636,
-202,Tultitlán,7648,3569,
-203,Toluca,4626,1835,
-204,Ixtapaluca,6346,2794,
-205,Atizapán (Santa Cruz),7398,3376,Por revisar: ver hoja Por revisar
-206,Coatepec Harinas,1772,406,
-207,Santo Tomás de los Plátanos,1102,241,Nombre unificado con otra variante
-208,Valle de Chalco Solidaridad,6713,2200,
-209,Huixquilucan,4395,1478,
-210,Otzolotepec,839,128,
-211,Zacazonapan,401,129,
-212,Atlautla,2688,473,
-213,Ecatepec de Morelos,10278,3994,
-214,Luvianos,1336,290,
-215,San Simon de Guerrero,684,157,
-216,Ozumba,1731,393,
-217,Tenango del Aire,1388,421,
-218,Naucalpan de Juárez,8905,3499,
-219,Tejupilco,4443,1208,
-220,Temamatla,2366,930,
-221,Tlalmanalco,1358,499,
-222,Tonanitla,1578,591,
-223,Tenancingo,1980,429,
-224,Papalotla,1124,365,
-225,Texcalyacac,595,210,
-226,Valle de Bravo,3387,1597,
-227,Atenco,2975,1080,
-228,Rayón,1625,409,
-229,Nezahualcóyotl,13536,4047,
-230,Mexicaltzingo,744,382,
-231,Zinacantepec,4946,1482,
-232,Jilotzingo,677,271,
-233,Cuautitlán Izcalli,10358,3432,
-234,Lerma,3187,1475,
-235,"Almoloya (sin especificar: ¿Juárez, Río o Alquisiras?)",7017,1241,Por revisar: ver hoja Por revisar
-236,Teoloyucan,3626,1133,
-237,Isidro Fabela,1851,586,
-238,San Felipe del Progreso,4453,1174,
-239,Soyaniquilpan de Juárez,1114,428,
-240,Apaxco,1395,483,
-241,Temoaya,1999,415,
-242,Melchor Ocampo,4494,1157,
-243,Amanalco de Becerra,1569,547,
-244,Hueypoxtla,699,286,
-245,Timilpan,1406,266,
-246,Polotitlán,1105,248,Nombre unificado con otra variante
-247,Chiconcuac,3438,1256,
-248,Tepotzotlán,6384,2799,Nombre unificado con otra variante
-249,Malinalco,1394,305,
-250,Zumpahuacan,1024,283,
-251,Huehuetoca,5548,2392,
-252,El Oro,1708,912,
-253,Tenango del Valle,3188,1639,
-254,Jiquipilco,2072,759,
-255,Tecámac,7147,2913,
-256,Tultitlán,6838,3516,
-257,Villa Guerrero,2497,712,
-258,Zumpango,3764,2504,
-259,Tlalnepantla de Baz,4700,1884,
-260,Ixtapan de la Sal,1606,595,
-261,Tonatico,997,332,
-262,Acolman,4105,2388,
-263,Atizapán de Zaragoza,4859,2435,Nombre unificado con otra variante
-264,Zacualpan,910,227,
-265,Coatepec Harinas,1691,477,
-266,Axapusco,2052,907,
-267,Naucalpan de Juárez,5478,2336,
-268,Almoloya de Alquisiras,602,225,
-269,Texcaltitlán,1095,357,Nombre unificado con otra variante
-270,Nopaltepec,1272,487,
-271,Temascalapa,2651,1217,
-272,Sultepec,998,347,Nombre unificado con otra variante
-273,Huixquilucan,1645,820,
-274,Amatepec,1000,384,
-275,San Martín de las Pirámides,1533,1029,Nombre unificado con otra variante
-276,Ocoyoacac,2295,1129,
-277,Tlatlaya,983,249,
-278,Otumba,963,397,
-279,Luvianos,504,151,
-280,Teotihuacán,2863,1466,Nombre unificado con otra variante
-281,Capulhuac,1454,595,
-282,Zacazonapan,349,143,
-283,Otzoloapan,267,111,
-284,Tepetlaoxtoc,1311,702,
-285,San Mateo Atenco,2308,977,
-286,Donato Guerra,940,313,
-287,Tezoyuca,1214,682,
-288,Chimalhuacán,5241,3708,Nombre unificado con otra variante
-289,Ixtlahuaca,4373,1636,
-290,San Simon de Guerrero,552,164,
-291,Temascaltepec,1225,290,
-292,Nezahualcóyotl,8725,4470,Nombre unificado con otra variante
-293,Temoaya,2441,1188,
-294,Tejupilco,2469,959,
-295,Tepetlixpa,1487,893,
-296,Almoloya de Juárez,4226,2439,
-297,Santo Tomás de los Plátanos,605,220,Nombre unificado con otra variante
-298,Ixtapan del Oro,735,305,
-299,Ecatzingo,1049,401,
-300,Ozumba,1449,792,
-301,San Felipe del Progreso,3451,1109,
-302,Villa de Allende,2018,931,
-303,Atlautla,732,346,
-304,Juchitepec,1537,698,
-305,Jocotitlán,1119,373,
-306,Valle de Bravo,1845,923,
-307,Amecameca,1958,906,
-308,Temascalcingo,1218,456,
-309,Ayapango,1314,458,
-310,Atlacomulco,4971,1668,
-311,Amanalco de Becerra,1348,533,
-312,Tenango del Aire,1082,652,
-313,Temamatla,1346,638,
-314,Acambay de Ruíz Castañeda,1490,517,
-315,Zinacantepec,3123,1150,
-316,Cocotitlán,1210,538,
-317,Aculco,1032,366,
-318,Chalco,8417,3440,
-319,Polotitlán,691,215,
-320,Toluca,4836,2156,
-321,Jilotepec,1973,690,
-322,Valle de Chalco Solidaridad,17772,4350,
-323,Soyaniquilpan de Juárez,922,345,
-324,Metepec,1021,414,
-325,Chapa de Mota,1441,323,
-326,Ixtapaluca,5325,2296,
-327,Nicolás Romero,7774,3141,
-328,Calimaya,2598,899,
-329,La Paz,6435,3097,
-330,Isidro Fabela,1434,583,
-331,San Antonio la Isla,1787,540,
-332,Jilotzingo,627,151,
-333,Rayón,1014,388,Nombre unificado con otra variante
-334,Texcoco,7029,2440,
-335,San José del Rincón,3694,1267,Nombre unificado con otra variante
-336,Chapultepec,1742,555,
-337,Mexicaltzingo,985,273,
-338,Papalotla,1800,687,
-339,Otzolotepec,4480,1583,
-340,Almoloya del Río,1468,750,Nombre unificado con otra variante
-341,Atenco,2222,1090,
-342,Texcalyacac,688,314,
-343,Chicoloapan,10589,3494,
-344,Ecatepec de Morelos,23816,5263,
-345,Santiago Tianguistenco,7260,2259,Por revisar: ver hoja Por revisar
-346,Tequixquiac,2238,1232,
-347,Tultepec,5737,2503,
-348,Xalatlaco,4301,1727,
-349,Apaxco,1939,769,
-350,Huehuetoca,7174,2887,
-351,Coacalco de Berriozábal,6145,2413,
-352,Jajalpa Tenango,2247,660,
-353,Jaltenco,2953,1253,
-354,Melchor Ocampo,3659,1028,
-355,Joquicingo,1046,371,
-356,Ocuilan,1046,324,
-357,Chiconcuac,2100,643,
-358,Tonanitla,1995,525,
-359,Malinalco,1280,369,
-360,Acolman,4367,1790,
-361,Cuautitlán Izcalli,6972,2249,
-362,Zumpahuacan,959,205,
-363,Villa Guerrero,1452,362,
-364,San Martín de las Pirámides,1434,548,Nombre unificado con otra variante
-365,Naucalpan de Juárez,4783,1341,
-366,Tonatico,1132,289,
-367,Otumba,2482,1010,
-368,Ixtapan de la Sal,2109,685,
-369,Nopaltepec,1543,688,
-370,Tepotzotlán,4622,1476,Nombre unificado con otra variante
-371,Coatepec Harinas,1755,434,
-372,Axapusco,2034,750,
-373,Texcaltitlán,586,193,Nombre unificado con otra variante
+﻿nc,municipio_en_excel,municipio_normalizado,tramites,personas
+1.,Tepetlixpa,Tepetlixpa,1371,525
+2.,Ocuilan,Ocuilan,897,531
+3.,Malinalco,Malinalco,1428,598
+4.,Ozumba,Ozumba,899,493
+5.,Tenango del Aire,Tenango del Aire,1180,675
+6.,Texcaltitlán,Texcaltitlán,1644,1858
+7.,Cocotitlán,Cocotitlán,616,277
+8.,Almoloya de Alquisiras,Almoloya de Alquisiras,760,358
+9.,Acambay,Acambay,1133,464
+10.,Acolman,Acolman,1765,948
+11.,Aculco,Aculco,664,261
+12.,San Martín de las Pirámides,San Martín de las Pirámides,767,378
+13.,Almoloya del Río,Almoloya del Río,1682,580
+14.,Jaltenco,Jaltenco,2078,892
+15.,Capulhuac,Capulhuac,647,230
+16.,Teoloyucan,Teoloyucan,740,311
+17.,Valle de Bravo,Valle de Bravo,1833,767
+18.,Ixtapan del Oro,Ixtapan del Oro,637,213
+19.,Temascaltepec,Temascaltepec,1531,363
+20.,Coyotepec,Coyotepec,1543,632
+21.,Santo Tomás de los Plátanos,Santo Tomás de los Plátanos,865,226
+22.,Valle de Chalco,Valle de Chalco,3074,1097
+23.,Ixtapan de la Sal,Ixtapan de la Sal,2304,544
+24.,Ixtapaluca,Ixtapaluca,5091,1819
+25.,Tonatico,Tonatico,1681,369
+26.,Tenango del Valle,Tenango del Valle,2571,1143
+27.,La Paz,La Paz,7187,2774
+28.,Xalatlaco,Xalatlaco,1615,574
+29.,Nezahualcóyotl,Nezahualcóyotl,18223,6317
+30.,Calimaya,Calimaya,3342,1011
+31.,Chimalhuacán,Chimalhuacán,11283,4227
+32.,Temoaya,Temoaya,1869,622
+33.,Texcoco,Texcoco,7918,3154
+34.,Chalco,Chalco,3163,1882
+35.,Tlatlaya,Tlatlaya,1146,388
+36.,Amatepec,Amatepec,1075,333
+37.,Otumba,Otumba,1629,699
+38.,Tecamac,Tecamac,9619,3792
+39.,Metepec,Metepec,2918,1089
+40.,San Antonio la Isla,San Antonio la Isla,3090,950
+41.,Ecatepec,Ecatepec,9441,2211
+42.,Toluca,Toluca,6505,2518
+43.,Tlalnepantla,Tlalnepantla,10168,4335
+44.,Donato Guerra,Donato Guerra,1449,441
+45.,Coacalco,Coacalco,9312,2809
+46.,Amanalco de Becerra,Amanalco de Becerra,1090,229
+47.,San Martín de las Pirámides,San Martín de las Pirámides,2376,969
+48.,Ixtlahuaca,Ixtlahuaca,2971,1161
+49.,Zumpango,Zumpango,4164,1706
+50.,Xonacatlán,Xonacatlán,2009,861
+51.,Chapultepec,Chapultepec,812,297
+52.,Hueypoxtla,Hueypoxtla,1248,488
+53.,Malinalco,Malinalco,1213,408
+54.,Apaxco,Apaxco,988,367
+55.,Chalco,Chalco,1450,459
+56.,Huhuetoca,Huehuetoca,5251,2757
+57.,Villa del Carbón,Villa del Carbón,2040,929
+58.,Tepotzotlán,Tepotzotlán,5414,2093
+59.,Atlacomulco,Atlacomulco,2557,1149
+60.,Morelos,Morelos,1035,259
+61.,Cuautitlán México,Cuautitlán México,5497,1648
+62.,Temascalcingo,Temascalcingo,2585,852
+63.,El Oro,El Oro,1596,484
+64.,Jilotepec,Jilotepec,3217,693
+65.,Tultepec.,Tultepec,4952,1592
+66.,Soyaniquilpan,Soyaniquilpan,1002,386
+67.,Zinacantepec,Zinacantepec,1573,563
+68.,Nicolas Romero,Nicolás Romero,2758,946
+69.,Cuautitlán Izcalli,Cuautitlán Izcalli,6884,2979
+70.,Atizapán de Zaragoza,Atizapán de Zaragoza,7870,2826
+71.,Naucalpan,Naucalpan,7718,2731
+72.,Atenco,Atenco,2871,1242
+73.,Otzolotepec,Otzolotepec,3913,1044
+74.,Tezoyuca,Tezoyuca,2188,618
+75.,Isidro Fabela,Isidro Fabela,1630,461
+76.,Jiquipilco,Jiquipilco,2242,695
+77.,Teotihuacán,Teotihuacán,4223,1381
+78.,Amecameca,Amecameca,3915,1816
+79.,San Felipe del Progreso,San Felipe del Progreso,3063,1115
+80.,Villa de Allende,Villa de Allende,961,306
+81.,Ayapango,Ayapango,1331,458
+82.,Tultitlán,Tultitlán,7258,2825
+83.,Polotitlán,Polotitlán,1069,321
+84.,Timilpan,Timilpan,2304,600
+85.,Juchitepec,Juchitepec,2293,1157
+86.,Jocotitlán.,Jocotitlán,4405,1799
+87.,Temamatla,Temamatla,3417,1217
+88.,Cuautitlán Izcalli.,Cuautitlán Izcalli,17441,6327
+89.,Papalotla.,Papalotla,954,379
+90.,Tepetlaoxtoc,Tepetlaoxtoc,1947,824
+91.,Villa Victoria,Villa Victoria,4345,1526
+92.,Chiconcuac,Chiconcuac,1721,582
+93.,Chicoloapan,Chicoloapan,9146,3383
+94.,Almoloya de Juarez,Almoloya de Juárez,6302,3389
+95.,Ecatzingo,Ecatzingo,1735,452
+96.,Coatepec Harinas,Coatepec Harinas,1779,769
+97.,Atlautla,Atlautla,2378,833
+98.,Villa guerrero,Villa Guerrero,1808,509
+99.,Chiautla,Chiautla,3630,1450
+100.,Tenancingo,Tenancingo,4195,1509
+101.,Nextlalpan,Nextlalpan,6741,1974
+102.,Ocoyoacac,Ocoyoacac,2400,987
+103.,San Mateo Atenco,San Mateo Atenco,4206,1998
+104.,Ecatepec,Ecatepec,12671,4223
+105.,Santiago Tianguistenco,Santiago Tianguistenco,3971,1343
+106.,Atizapán,Atizapán,2069,560
+107.,Lerma,Lerma,4416,1540
+108.,Mexicaltzingo,Mexicaltzingo,747,272
+109.,Rayón,Rayón,1505,537
+110.,Jilotzingo,Jilotzingo,674,232
+111.,Texcalyacac,Texcalyacac,1629,345
+112.,Tequixquiac,Tequixquiac,2590,1009
+113.,Temascalapa,Temascalapa,3121,1136
+114.,Zumpahuacan,Zumpahuacan,2403,466
+115.,Axapusco,Axapusco,1559,514
+116.,Zacualpan,Zacualpan,2334,603
+117.,Tonanitla,Tonanitla,2323,913
+118.,Sultepec,Sultepec,1952,424
+119.,Nopaltepec,Nopaltepec,979,385
+120.,Tejupilco,Tejupilco,2857,900
+121.,Melchor Ocampo,Melchor Ocampo,3157,1082
+122.,Luvianos,Luvianos,974,196
+123.,Naucalpan,Naucalpan,4044,1161
+124.,Otzoloapan,Otzoloapan,833,150
+125.,Zacazonapan,Zacazonapan,852,117
+126.,San Simon de Guerrero,San Simon de Guerrero,1538,325
+127.,Tlalmanalco,Tlalmanalco,2232,760
+128.,Tlalnepantla,Tlalnepantla,9698,2904
+129.,Texcaltitlan,Texcaltitlán,1648,363
+130.,Almoloya de Alquisiras,Almoloya de Alquisiras,1708,365
+131.,Coacalco,Coacalco,5633,1952
+132.,Ixtapan de la Sal,Ixtapan de la Sal,3964,465
+133.,Otzolotepec,Otzolotepec,1522,648
+134.,Tonatico,Tonatico,1535,334
+135.,San Jose del Rincón,San José del Rincón,1619,724
+136.,Malinalco,Malinalco,1185,362
+137.,La Paz,La Paz,7645,3211
+138.,Tenango del Valle,Tenango del Valle,5276,1723
+139.,Nezahualcóyotl,Nezahualcóyotl,13573,4542
+140.,Chapa de Mota,Chapa de Mota,1082,398
+141.,Almoloya del Río,Almoloya del Río,1147,338
+142.,Chimalhuacan,Chimalhuacán,10203,3647
+143.,Xalatlaco,Xalatlaco,2922,1038
+144.,Texcoco,Texcoco,7160,2787
+145.,Chalco,Chalco,10247,4742
+146.,Acolman,Acolman,4863,1665
+147.,San Antonio la Isla.,San Antonio la Isla,2737,754
+148.,Chapultepec,Chapultepec,1844,439
+149.,Tepetlixpa,Tepetlixpa,3621,957
+150.,Tultepec,Tultepec,3670,2565
+151.,Tlatlaya,Tlatlaya,756,346
+152.,Amatepec,Amatepec,1933,688
+153.,Ecatzingo,Ecatzingo,1275,182
+154.,Juchitepec,Juchitepec,4835,1217
+155.,Temoaya,Temoaya,6775,1084
+156.,Tepotzotlan,Tepotzotlán,7388,2635
+157.,Ayapango,Ayapango,1355,390
+158.,Amecameca,Amecameca,5175,1802
+159.,Nextlalpan,Nextlalpan,2695,628
+160.,Ocoyoacac,Ocoyoacac,3660,795
+161.,Tezoyuca,Tezoyuca,2392,673
+162.,Cocotitlán,Cocotitlán,2361,818
+163.,Jiquipilco,Jiquipilco,5582,1550
+164.,Temascalcingo,Temascalcingo,2455,681
+165.,Otumba,Otumba,1493,730
+166.,Teotihuacan,Teotihuacán,3812,1352
+167.,Villa del Carbón,Villa del Carbón,1509,539
+168.,Acambay,Acambay,2584,650
+169.,Villa de Allende,Villa de Allende,2383,865
+170.,Tepetlaoxtoc,Tepetlaoxtoc,2155,850
+171.,Aculco,Aculco,1474,449
+172.,Jaltenco,Jaltenco,3129,825
+173.,Ixtapan del Oro,Ixtapan del Oro,1717,478
+174.,Jilotepec,Jilotepec,3893,1243
+175.,Valle de Chalco,Valle de Chalco,3579,1708
+176.,Coyotepec,Coyotepec,4072,1591
+177.,Morelos,Morelos,1846,393
+178.,Huehuetoca,Huehuetoca,14167,4511
+179.,Amanalco,Amanalco de Becerra,2853,973
+180.,Atlacomulco,Atlacomulco,6943,1795
+181.,Temascaltepec,Temascaltepec,3074,1246
+182.,Cuautitlán México,Cuautitlán México,7947,2518
+183.,San Martín de las Piramides,San Martín de las Pirámides,5349,2533
+184.,Villa Guerrero,Villa Guerrero,3715,914
+185.,Joquicingo,Joquicingo,1172,505
+186.,Apaxco,Apaxco,2413,869
+187.,Atizapán,Atizapán,1142,1038
+188.,Ocuilan,Ocuilan,1254,303
+189.,Temascalapa,Temascalapa,2069,693
+190.,San Mateo Atenco,San Mateo Atenco,2274,1411
+191.,Calimaya,Calimaya,2313,526
+192.,Nopaltepec,Nopaltepec,1107,280
+193.,Nicolas Romero,Nicolás Romero,10463,3691
+194.,Capulhuac,Capulhuac,1003,319
+195.,Axapusco,Axapusco,1953,643
+196.,Xonacatlan,Xonacatlán,1706,621
+197.,Chicoloapan,Chicoloapan,3487,907
+198.,Zumpango,Zumpango,2611,1196
+199.,Metepec,Metepec,1579,855
+200.,Chiconcuac,Chiconcuac,1946,471
+201.,Tecamac,Tecamac,10644,3636
+202.,Tultitlán,Tultitlán,7648,3569
+203.,Toluca,Toluca,4626,1835
+204.,Ixtapaluca,Ixtapaluca,6346,2794
+205.,Atizapan de Zaragoza,Atizapán de Zaragoza,7398,3376
+206.,Coatepec Harinas,Coatepec Harinas,1772,406
+207.,Santo Tomas,Santo Tomás de los Plátanos,1102,241
+208.,Valle de Chalco,Valle de Chalco,6713,2200
+209.,Huixquilucan,Huixquilucan,4395,1478
+210.,Otzolotepec,Otzolotepec,839,128
+211.,Zacazonapan,Zacazonapan,401,129
+212.,Atlautla,Atlautla,2688,473
+213.,Ecatepec,Ecatepec,10278,3994
+214.,Luvianos,Luvianos,1336,290
+215.,San Simon de Guerrero,San Simon de Guerrero,684,157
+216.,Ozumba,Ozumba,1731,393
+217.,Tenango del Aire,Tenango del Aire,1388,421
+218.,Naucalpan,Naucalpan,8905,3499
+219.,Tejupilco,Tejupilco,4443,1208
+220.,Temamatla,Temamatla,2366,930
+221.,Tlalmanalco,Tlalmanalco,1358,499
+222.,Tonanitla,Tonanitla,1578,591
+223.,Tenancingo,Tenancingo,1980,429
+224.,Papalotla.,Papalotla,1124,365
+225.,Texcalyacac,Texcalyacac,595,210
+226.,Valle de Bravo,Valle de Bravo,3387,1597
+227.,Atenco,Atenco,2975,1080
+228.,Rayón,Rayón,1625,409
+229.,Nezahualcóyotl,Nezahualcóyotl,13536,4047
+230.,Mexicaltzingo,Mexicaltzingo,744,382
+231.,Zinacantepec,Zinacantepec,4946,1482
+232.,Jilotzingo,Jilotzingo,677,271
+233.,Cuautitlán Izcalli.,Cuautitlán Izcalli,10358,3432
+234.,Lerma,Lerma,3187,1475
+235.,Almoloya de Juárez,Almoloya de Juárez,7017,1241
+236.,Teoloyucan,Teoloyucan,3626,1133
+237.,Isidro Fabela,Isidro Fabela,1851,586
+238.,San Felipe del Progreso,San Felipe del Progreso,4453,1174
+239.,Soyaniquilpan,Soyaniquilpan,1114,428
+240.,Apaxco,Apaxco,1395,483
+241.,Temoaya,Temoaya,1999,415
+242.,Melchor Ocampo,Melchor Ocampo,4494,1157
+243.,Amanalco de Becerra,Amanalco de Becerra,1569,547
+244.,Hueypoxtla,Hueypoxtla,699,286
+245.,Timilpan,Timilpan,1406,266
+246.,Polotitlan,Polotitlán,1105,248
+247.,Chiconcuac,Chiconcuac,3438,1256
+248.,Tepotzotlan,Tepotzotlán,6384,2799
+249.,Malinalco,Malinalco,1394,305
+250.,Zumpahuacan,Zumpahuacan,1024,283
+251.,Huehuetoca,Huehuetoca,5548,2392
+252.,El Oro,El Oro,1708,912
+253.,Tenango del Valle,Tenango del Valle,3188,1639
+254.,Jiquipilco,Jiquipilco,2072,759
+255.,Tecamac,Tecamac,7147,2913
+256.,Tultitlán,Tultitlán,6838,3516
+257.,Villa Guerrero,Villa Guerrero,2497,712
+258.,Zumpango,Zumpango,3764,2504
+259.,Tlalnepantla,Tlalnepantla,4700,1884
+260.,Ixtapan de la Sal,Ixtapan de la Sal,1606,595
+261.,Tonatico,Tonatico,997,332
+262.,Acolman,Acolman,4105,2388
+263.,Atizapan de Zaragoza,Atizapán de Zaragoza,4859,2435
+264.,Zacualpan,Zacualpan,910,227
+265.,Coatepec Harinas,Coatepec Harinas,1691,477
+266.,Axapusco,Axapusco,2052,907
+267.,Naucalpan,Naucalpan,5478,2336
+268.,Almoloya de Alquisiras,Almoloya de Alquisiras,602,225
+269.,Texcaltitlan,Texcaltitlán,1095,357
+270.,Nopaltepec,Nopaltepec,1272,487
+271.,Temascalapa,Temascalapa,2651,1217
+272.,sultepec,Sultepec,998,347
+273.,Huixquilucan,Huixquilucan,1645,820
+274.,Amatepec,Amatepec,1000,384
+275.,San Martín de las Piramides,San Martín de las Pirámides,1533,1029
+276.,Ocoyoacac,Ocoyoacac,2295,1129
+277.,Tlatlaya,Tlatlaya,983,249
+278.,Otumba,Otumba,963,397
+279.,Luvianos,Luvianos,504,151
+280.,Teotihuacan,Teotihuacán,2863,1466
+281.,Capulhuac,Capulhuac,1454,595
+282.,Zacazonapan,Zacazonapan,349,143
+283.,Otzoloapan,Otzoloapan,267,111
+284.,Tepetlaoxtoc,Tepetlaoxtoc,1311,702
+285.,San Mateo Atenco,San Mateo Atenco,2308,977
+286.,Donato Guerra,Donato Guerra,940,313
+287.,Tezoyuca,Tezoyuca,1214,682
+288.,Chimalhuacan,Chimalhuacán,5241,3708
+289.,Ixtlahuaca,Ixtlahuaca,4373,1636
+290.,San Simon de Guerrero,San Simon de Guerrero,552,164
+291.,Temascaltepec,Temascaltepec,1225,290
+292.,Nezahualcoyotl,Nezahualcóyotl,8725,4470
+293.,Temoaya,Temoaya,2441,1188
+294.,Tejupilco,Tejupilco,2469,959
+295.,Tepetlixpa,Tepetlixpa,1487,893
+296.,Almoloya de Juarez,Almoloya de Juárez,4226,2439
+297.,Santo Tomas,Santo Tomás de los Plátanos,605,220
+298.,Ixtapan del Oro,Ixtapan del Oro,735,305
+299.,Ecatzingo,Ecatzingo,1049,401
+300.,Ozumba,Ozumba,1449,792
+301.,San Felipe del Progreso,San Felipe del Progreso,3451,1109
+302.,Villa de Allende,Villa de Allende,2018,931
+303.,Atlautla,Atlautla,732,346
+304.,Juchitepec,Juchitepec,1537,698
+305.,Jocotitlán,Jocotitlán,1119,373
+306.,Valle de Bravo,Valle de Bravo,1845,923
+307.,Amecameca,Amecameca,1958,906
+308.,Temascalcingo,Temascalcingo,1218,456
+309.,Ayapango,Ayapango,1314,458
+310.,Atlacomulco,Atlacomulco,4971,1668
+311.,Amanalco de Becerra,Amanalco de Becerra,1348,533
+312.,Tenango del Aire,Tenango del Aire,1082,652
+313.,Temamatla,Temamatla,1346,638
+314.,Acambay,Acambay,1490,517
+315.,Zinacantepec,Zinacantepec,3123,1150
+316.,Cocotitlán,Cocotitlán,1210,538
+317.,Aculco,Aculco,1032,366
+318.,Chalco,Chalco,8417,3440
+319.,Polotitlán,Polotitlán,691,215
+320.,Toluca,Toluca,4836,2156
+321.,Jilotepec,Jilotepec,1973,690
+322.,Valle de Chalco,Valle de Chalco,17772,4350
+323.,Soyaniquilpan,Soyaniquilpan,922,345
+324.,Metepec,Metepec,1021,414
+325.,Chapa de Mota,Chapa de Mota,1441,323
+326.,Ixtapaluca,Ixtapaluca,5325,2296
+327.,Nicolas Romero,Nicolás Romero,7774,3141
+328.,Calimaya,Calimaya,2598,899
+329.,La Paz,La Paz,6435,3097
+330.,Isidro Fabela,Isidro Fabela,1434,583
+331.,San Antonio la Isla,San Antonio la Isla,1787,540
+332.,Jilotzingo,Jilotzingo,627,151
+333.,Rayon,Rayón,1014,388
+334.,Texcoco,Texcoco,7029,2440
+335.,San Jose del Rincon,San José del Rincón,3694,1267
+336.,Chapultepec,Chapultepec,1742,555
+337.,Mexicaltzingo,Mexicaltzingo,985,273
+338.,Papalotla,Papalotla,1800,687
+339.,Otzolotepec,Otzolotepec,4480,1583
+340.,Almoloya del Rio,Almoloya del Río,1468,750
+341.,Atenco,Atenco,2222,1090
+342.,Texcalyacac,Texcalyacac,688,314
+343.,Chicoloapan,Chicoloapan,10589,3494
+344.,Ecatepec,Ecatepec,23816,5263
+345.,Tianguistenco,Santiago Tianguistenco,7260,2259
+346.,Tequixquiac,Tequixquiac,2238,1232
+347.,Tultepec,Tultepec,5737,2503
+348.,Xalatlaco,Xalatlaco,4301,1727
+349.,Apaxco,Apaxco,1939,769
+350.,Huehuetoca,Huehuetoca,7174,2887
+351.,Coacalco,Coacalco,6145,2413
+352.,Jajalpa Tenango,Tenango del Valle,2247,660
+353.,Jaltenco,Jaltenco,2953,1253
+354.,Melchor Ocampo,Melchor Ocampo,3659,1028
+355.,Joquicingo,Joquicingo,1046,371
+356.,Ocuilan,Ocuilan,1046,324
+357.,Chiconcuac,Chiconcuac,2100,643
+358.,Tonanitla,Tonanitla,1995,525
+359.,Malinalco,Malinalco,1280,369
+360.,Acolman,Acolman,4367,1790
+361.,Cuautitlán Izcalli,Cuautitlán Izcalli,6972,2249
+362.,Zumpahuacan,Zumpahuacan,959,205
+363.,Villa Guerrero,Villa Guerrero,1452,362
+364.,San Martin de las Piramides,San Martín de las Pirámides,1434,548
+365.,Naucalpan,Naucalpan,4783,1341
+366.,Tonatico,Tonatico,1132,289
+367.,Otumba,Otumba,2482,1010
+368.,Ixtapan de la Sal,Ixtapan de la Sal,2109,685
+369.,Nopaltepec,Nopaltepec,1543,688
+370.,Tepotzotlan,Tepotzotlán,4622,1476
+371.,Coatepec Harinas,Coatepec Harinas,1755,434
+372.,Axapusco,Axapusco,2034,750
+373.,Texcaltitlan,Texcaltitlán,586,193
